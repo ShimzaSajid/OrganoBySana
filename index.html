@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organo By Sana - Natural Hair Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .brand-green { color: #365337; }
+        .bg-brand-green { background-color: #365337; }
+        .brand-beige { color: #F8F4E9; }
+        .bg-brand-beige { background-color: #F8F4E9; }
+        .brand-gold { color: #e8c253; }
+        .bg-brand-gold { background-color: #e8c253; }
+        .brand-brown { color: #3C2E2A; }
+        .bg-brand-brown { background-color: #3C2E2A; }
+        
+        .hero-section {
+            background: linear-gradient(rgba(54, 83, 55, 0.8), rgba(54, 83, 55, 0.8)), url('images/front-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 95vh; 
+            display: flex;
+            align-items: center;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .rotate-hover {
+            transition: transform 0.5s ease;
+        }
+        
+        .rotate-hover:hover {
+            transform: rotate(5deg);
+        }
+        
+        .slide-in-left {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+        
+        .slide-in-left.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .slide-in-right {
+            transform: translateX(50px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+        
+        .slide-in-right.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .stagger-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-scroll {
+            background-color: rgba(54, 83, 55, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .glow {
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(232, 194, 83, 0.6);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(232, 194, 83, 0.7);
+        }
+        
+        .scale-on-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .scale-on-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-brand-beige text-brand-brown">
+    <!-- Navigation -->
+<nav id="navbar" class="bg-brand-green text-brand-beige py-8 px-6 fixed w-full top-0 z-50 transition-all duration-300">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Left Side: Search and Cart Icons -->
+    <div class="flex items-center space-x-5">
+      <!-- Search Icon -->
+      <button class="hover:text-brand-gold transition duration-300 transform hover:scale-110">
+        <i class="fas fa-search text-2xl"></i>
+      </button>
+
+      <!-- Cart Icon -->
+      <button class="hover:text-brand-gold transition duration-300 relative transform hover:scale-110">
+        <i class="fas fa-shopping-cart text-2xl"></i>
+        <span class="absolute -top-2 -right-2 bg-brand-gold text-brand-green text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold pulse">0</span>
+      </button>
+    </div>
+
+    <!-- Centered Logo -->
+    <div class="flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
+      <img src="images/brand-logo.png" 
+           alt="Organo Logo" 
+           class="h-24 w-auto transition-transform duration-300 hover:scale-105" />
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-10 text-lg">
+      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+        Home
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <div class="dropdown relative">
+        <a href="#" class="hover:text-brand-gold transition duration-300 flex items-center relative group">
+          Shop <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <div class="dropdown-menu absolute hidden bg-white text-brand-green shadow-lg rounded-md mt-2 py-2 w-52 transform origin-top transition-all duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100">
+          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">All Products</a>
+          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
+          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
+          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
+          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
+        </div>
+      </div>
+      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+        Contact
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+        FAQs
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+        About Us
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-brand-beige transform transition duration-300 hover:scale-110">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-brand-green mt-4 pb-4 transition-all duration-300 transform origin-top scale-95">
+    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">Home</a>
+    <div class="py-2 px-4">
+      <a href="#" class="flex justify-between items-center hover:bg-brand-brown/20 transition duration-200">
+        Shop <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </a>
+      <div class="pl-4 mt-2 hidden transition-all duration-300" id="mobile-shop-menu">
+        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">All Products</a>
+        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
+        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
+        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
+        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
+      </div>
+    </div>
+    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">Contact</a>
+    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">FAQs</a>
+    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">About Us</a>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-brand-beige py-20 px-4 text-center mt-20">
+        <div class="container mx-auto max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Natural Care, Now in Style</h1>
+            <p class="text-xl mb-8 fade-in" style="transition-delay: 0.2s">Long hair is not just beauty, it's a journey of patience, care, and love. Every strand tells a story of strength.</p>
+            <a href="#" class="bg-brand-gold text-brand-green font-bold py-3 px-8 rounded-full inline-block hover:bg-yellow-500 transition duration-300 transform hover:scale-105 glow bounce-in" style="transition-delay: 0.4s">
+                Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+<section class="py-16 px-4 bg-white">
+  <div class="container mx-auto">
+ <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">
+  Why us you ask?
+</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 place-items-center">
+      
+      <!-- Woman Owned Business -->
+      <div class="text-center p-6 stagger-item hover-lift">
+        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
+          <img src="images/Woman Beauty Logotype _ Premium Vector.png" 
+               alt="Woman Owned Business" 
+               class="w-28 h-28 object-contain" />
+        </div>
+        <h3 class="text-xl font-bold brand-green">Woman Owned Business</h3>
+      </div>
+
+      <!-- Handmade With Love -->
+      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.1s">
+        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
+          <img src="images/download (1).png" 
+               alt="Handmade With Love" 
+               class="w-28 h-28 object-contain" />
+        </div>
+        <h3 class="text-xl font-bold brand-green">Handmade With Love</h3>
+      </div>
+
+      <!-- Made in Pakistan -->
+      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.2s">
+        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
+          <img src="images/madeinpakistan-removebg-preview.png" 
+               alt="Made in Pakistan" 
+               class="w-28 h-28 object-contain" />
+        </div>
+        <h3 class="text-xl font-bold brand-green">Made in Pakistan</h3>
+      </div>
+
+      <!-- 100% Organic Ingredients -->
+      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.3s">
+        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
+          <img src="images/organic.png" 
+               alt="Organic" 
+               class="w-28 h-28 object-contain" />
+        </div>
+        <h3 class="text-xl font-bold brand-green">100% Organic Ingredients</h3>
+      </div>
+
+      <!-- New Arrivals -->
+      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.4s">
+        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
+          <img src="images/newarrival.png" 
+               alt="New Arrivals" 
+               class="w-28 h-28 object-contain" />
+        </div>
+        <h3 class="text-xl font-bold brand-green">New Arrivals Regularly</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Category Section -->
+    <section class="py-16 px-4 bg-white">
+  <div class="container mx-auto text-center">
+   <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">Categories</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
+                
+                <!-- Hair Oil -->
+                <div class="flex flex-col items-center stagger-item scale-on-hover">
+                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                        <img src="images/7 Benefits of Amla for Hair.png" alt="Hair Oil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <p class="text-xl font-bold mt-4 brand-green">Hair Oil</p>
+                </div>
+                
+                <!-- Organic Soap -->
+                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.1s">
+                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                        <img src="images/Organic Soaps By Organic Oasis.png" alt="Organic Soap" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <p class="text-xl font-bold mt-4 brand-green">Organic Soap</p>
+                </div>
+                
+                <!-- Protein Powder -->
+                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.2s">
+                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                        <img src="images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png" alt="Protein Powder" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <p class="text-xl font-bold mt-4 brand-green">Protein Powder</p>
+                </div>
+                
+                <!-- Slim Tox -->
+                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.3s">
+                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                        <img src="images/Slim_Tox_AI.png" alt="Slim Tox" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <p class="text-xl font-bold mt-4 brand-green">Slim Tox</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+<section class="py-20 px-6 bg-white">
+  <div class="container mx-auto">
+    <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">
+      What Our Customers Say
+      <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-brand-gold rounded-full"></span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center mb-5">
+          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+            A
+          </div>
+          <div class="ml-4">
+            <h4 class="font-semibold">Aisha Khan</h4>
+            <div class="text-brand-gold text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">“The hair oil has transformed my dry, damaged hair. I've never received so many compliments!”</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center mb-5">
+          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+            F
+          </div>
+          <div class="ml-4">
+            <h4 class="font-semibold">Fatima Z.</h4>
+            <div class="text-brand-gold text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">“As someone with sensitive skin, I appreciate how gentle the organic soaps are. Will definitely repurchase!”</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center mb-5">
+          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+            S
+          </div>
+          <div class="ml-4">
+            <h4 class="font-semibold">Sana Ahmed</h4>
+            <div class="text-brand-gold text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">“The protein powder mixes well and doesn't have that chalky taste. Perfect for my morning smoothies!”</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-brand-green text-brand-beige py-12 px-4">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="fade-in">
+        <div class="flex items-center space-x-2 mb-4 -mt-9">
+          <img src="images/brand-logo.png" 
+               alt="Organo Logo" 
+               class="h-16 md:h-21 w-auto transition-transform duration-300 hover:scale-105" />
+        </div>
+                    <p class="mb-4">Natural care products handmade with love in Pakistan.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.1s">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shop</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Hair Oil</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Organic Soap</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Protein Powder</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Slim Tox</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.2s">
+                    <h3 class="text-lg font-bold mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">FAQs</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.3s">
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-brand-gold"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-brand-gold"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-brand-gold"></i>
+                            <span>info@organobysana.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-beige/20 mt-8 pt-8 text-center fade-in" style="transition-delay: 0.4s">
+                <p>© 2025 Organo By Sana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle animation class
+            if (!mobileMenu.classList.contains('hidden')) {
+                setTimeout(() => {
+                    mobileMenu.classList.remove('scale-95');
+                }, 10);
+            } else {
+                mobileMenu.classList.add('scale-95');
+            }
+        });
+
+        // Mobile shop menu functionality
+        const mobileShopLink = document.querySelector('#mobile-menu a[href="#"]');
+        if (mobileShopLink) {
+            mobileShopLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const mobileShopMenu = document.getElementById('mobile-shop-menu');
+                mobileShopMenu.classList.toggle('hidden');
+                
+                // Rotate the chevron icon
+                const chevron = this.querySelector('i');
+                chevron.classList.toggle('rotate-180');
+            });
+        }
+
+        // Search functionality (basic example)
+        document.querySelector('.fa-search').addEventListener('click', function() {
+            const searchTerm = prompt('What are you looking for?');
+            if (searchTerm) {
+                alert('Searching for: ' + searchTerm);
+                // You would typically redirect to a search results page here
+            }
+        });
+
+        // Scroll animations
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stagger-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                // Check if element is in viewport
+                if (elementTop < window.innerHeight - 50 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Navbar scroll effect
+        function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scroll');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-7');
+            } else {
+                navbar.classList.remove('nav-scroll');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-7');
+            }
+        }
+
+        // Initialize animations on page load
+        window.addEventListener('load', function() {
+            checkVisibility();
+            handleNavbarScroll();
+            
+            // Add a slight delay to hero animations for better effect
+            setTimeout(() => {
+                document.querySelector('.hero-section h1').classList.add('visible');
+                document.querySelector('.hero-section p').classList.add('visible');
+            }, 300);
+        });
+
+        // Check visibility on scroll
+        window.addEventListener('scroll', function() {
+            checkVisibility();
+            handleNavbarScroll();
+        });
+
+        // Add hover effect to dropdown menu
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                const menu = this.querySelector('.dropdown-menu');
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                const menu = this.querySelector('.dropdown-menu');
+                menu.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            });
+        });
+         document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll('.fade-in, .stagger-item, .slide-in-left, .slide-in-right');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+    </script>
+</body>
+</html>
