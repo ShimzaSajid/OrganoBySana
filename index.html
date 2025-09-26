@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organo By Sana - Natural Hair Care</title>
+    <title>Organo By Sana - Premium Natural Hair Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --brand-green: #2a4d2a;
+            --brand-light-green: #3a6b3a;
+            --brand-beige: #F8F4E9;
+            --brand-gold: #d4af37;
+            --brand-brown: #3C2E2A;
+            --brand-cream: #FFFBF0;
+        }
+        
         body {
             font-family: 'Lato', sans-serif;
             scroll-behavior: smooth;
+            background-color: var(--brand-cream);
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
         }
         
-        .brand-green { color: #365337; }
-        .bg-brand-green { background-color: #365337; }
-        .brand-beige { color: #F8F4E9; }
-        .bg-brand-beige { background-color: #F8F4E9; }
-        .brand-gold { color: #e8c253; }
-        .bg-brand-gold { background-color: #e8c253; }
-        .brand-brown { color: #3C2E2A; }
-        .bg-brand-brown { background-color: #3C2E2A; }
+        .brand-green { color: var(--brand-green); }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .brand-light-green { color: var(--brand-light-green); }
+        .bg-brand-light-green { background-color: var(--brand-light-green); }
+        .brand-beige { color: var(--brand-beige); }
+        .bg-brand-beige { background-color: var(--brand-beige); }
+        .brand-gold { color: var(--brand-gold); }
+        .bg-brand-gold { background-color: var(--brand-gold); }
+        .brand-brown { color: var(--brand-brown); }
+        .bg-brand-brown { background-color: var(--brand-brown); }
+        .brand-cream { color: var(--brand-cream); }
+        .bg-brand-cream { background-color: var(--brand-cream); }
         
         .hero-section {
-            background: linear-gradient(rgba(54, 83, 55, 0.8), rgba(54, 83, 55, 0.8)), url('images/front-banner.jpg');
+            background: linear-gradient(rgba(42, 77, 42, 0.3), rgba(42, 77, 42, 0.3)), url('images/front-banner.jpg');
             background-size: cover;
             background-position: center;
-            min-height: 95vh; 
+            min-height: 100vh;
             display: flex;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
         }
         
         .dropdown:hover .dropdown-menu {
@@ -121,9 +148,11 @@
         }
         
         .nav-scroll {
-            background-color: rgba(54, 83, 55, 0.95);
+            background-color: rgba(42, 77, 42, 0.98);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
         
         .floating {
@@ -141,11 +170,11 @@
         }
         
         .glow:hover {
-            box-shadow: 0 0 20px rgba(232, 194, 83, 0.6);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
         }
         
         .text-glow {
-            text-shadow: 0 0 10px rgba(232, 194, 83, 0.7);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
         }
         
         .scale-on-hover {
@@ -155,205 +184,503 @@
         .scale-on-hover:hover {
             transform: scale(1.05);
         }
+        
+ .section-title {
+    position: relative;
+    display: block; 
+    margin-bottom: 3rem;
+    width: 100%; 
+}
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--brand-gold);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-green), var(--brand-gold));
+        }
+        
+        .category-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--brand-gold);
+            position: relative;
+        }
+        
+        .category-circle::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(42, 77, 42, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .category-circle:hover::after {
+            opacity: 1;
+        }
+        
+        .review-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 120px;
+            color: var(--brand-gold);
+            opacity: 0.1;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-gold), #f1c40f);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--brand-gold);
+            color: var(--brand-gold);
+            background: transparent;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--brand-gold);
+            color: white;
+        }
+        
+        .product-showcase {
+            background: linear-gradient(135deg, var(--brand-cream) 0%, white 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .newsletter-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .newsletter-input {
+            border: 2px solid var(--brand-beige);
+            border-radius: 50px;
+            padding: 12px 25px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            border-color: var(--brand-gold);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .floating-leaves {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .leaf-1 {
+            top: 10%;
+            left: 5%;
+            animation: float-leaf 20s infinite linear;
+        }
+        
+        .leaf-2 {
+            bottom: 15%;
+            right: 8%;
+            animation: float-leaf 25s infinite linear reverse;
+        }
+        
+        @keyframes float-leaf {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .instagram-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .instagram-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .instagram-item::after {
+            content: '\f16d';
+            font-family: 'Font Awesome 6 Brands';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .instagram-item:hover::after {
+            opacity: 1;
+        }
+        
+        .instagram-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(42, 77, 42, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .instagram-item:hover::before {
+            opacity: 1;
+        }
+        
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--brand-cream);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 5px solid rgba(212, 175, 55, 0.2);
+            border-top-color: var(--brand-gold);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
-<body class="bg-brand-beige text-brand-brown">
+<body class="bg-brand-cream text-brand-brown">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- Navigation -->
-<nav id="navbar" class="bg-brand-green text-brand-beige py-8 px-6 fixed w-full top-0 z-50 transition-all duration-300">
-  <div class="container mx-auto flex justify-between items-center">
-    <!-- Left Side: Search and Cart Icons -->
-    <div class="flex items-center space-x-5">
-      <!-- Search Icon -->
-      <button class="hover:text-brand-gold transition duration-300 transform hover:scale-110">
-        <i class="fas fa-search text-2xl"></i>
-      </button>
+    <nav id="navbar" class="bg-brand-green text-brand-beige py-6 px-6 fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Side: Search and Cart Icons -->
+            <div class="flex items-center space-x-5">
+                <!-- Search Icon -->
+            <button class="text-white hover:text-brand-gold transition duration-300 transform hover:scale-110">
+                <i class="fas fa-search text-xl"></i>
+            </button>
 
-      <!-- Cart Icon -->
-      <button class="hover:text-brand-gold transition duration-300 relative transform hover:scale-110">
-        <i class="fas fa-shopping-cart text-2xl"></i>
-        <span class="absolute -top-2 -right-2 bg-brand-gold text-brand-green text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold pulse">0</span>
-      </button>
-    </div>
+            <!-- Cart Icon -->
+            <button class="text-white hover:text-brand-gold transition duration-300 relative transform hover:scale-110">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="absolute -top-2 -right-2 bg-brand-gold text-brand-green text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold pulse">0</span>
+            </button>
+            </div>
 
-    <!-- Centered Logo -->
-    <div class="flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-      <img src="images/brand-logo.png" 
-           alt="Organo Logo" 
-           class="h-24 w-auto transition-transform duration-300 hover:scale-105" />
-    </div>
+            <!-- Centered Logo -->
+            <div class="flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
+                <img src="images/brand-logo.png" 
+                     alt="Organo Logo" 
+                     class="h-20 w-auto transition-transform duration-300 hover:scale-105" />
+            </div>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-10 text-lg">
-      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+            <!-- Desktop Menu -->
+<div class="hidden md:flex space-x-10 text-lg">
+    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
         Home
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <div class="dropdown relative">
-        <a href="#" class="hover:text-brand-gold transition duration-300 flex items-center relative group">
-          Shop <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:rotate-180"></i>
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <div class="dropdown relative">
+        <a href="#" class="text-white hover:text-brand-gold transition duration-300 flex items-center relative group">
+            Shop <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
         </a>
         <div class="dropdown-menu absolute hidden bg-white text-brand-green shadow-lg rounded-md mt-2 py-2 w-52 transform origin-top transition-all duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100">
-          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">All Products</a>
-          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
-          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
-          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
-          <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">All Products</a>
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
         </div>
-      </div>
-      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+    </div>
+    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
         Contact
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+    </a>
+    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
         FAQs
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#" class="hover:text-brand-gold transition duration-300 relative group">
+    </a>
+    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
         About Us
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
-      </a>
-    </div>
+    </a>
+</div>
 
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="mobile-menu-button" class="text-brand-beige transform transition duration-300 hover:scale-110">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-    </div>
-  </div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden">
+    <button id="mobile-menu-button" class="text-white transform transition duration-300 hover:scale-110">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+</div>
+</div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-brand-green mt-4 pb-4 transition-all duration-300 transform origin-top scale-95">
-    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">Home</a>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-brand-green mt-4 pb-4 transition-all duration-300 transform origin-top scale-95">
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Home</a>
     <div class="py-2 px-4">
-      <a href="#" class="flex justify-between items-center hover:bg-brand-brown/20 transition duration-200">
-        Shop <i class="fas fa-chevron-down transition-transform duration-300"></i>
-      </a>
-      <div class="pl-4 mt-2 hidden transition-all duration-300" id="mobile-shop-menu">
-        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">All Products</a>
-        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
-        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
-        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
-        <a href="#" class="block py-1 hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
-      </div>
+        <a href="#" class="flex justify-between items-center text-white hover:bg-brand-brown/20 transition duration-200">
+            Shop <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </a>
+        <div class="pl-4 mt-2 hidden transition-all duration-300" id="mobile-shop-menu">
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">All Products</a>
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
+        </div>
     </div>
-    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">Contact</a>
-    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">FAQs</a>
-    <a href="#" class="block py-2 px-4 hover:bg-brand-brown/20 transition duration-200">About Us</a>
-  </div>
-</nav>
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Contact</a>
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">FAQs</a>
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">About Us</a>
+</div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section text-brand-beige py-20 px-4 text-center mt-20">
-        <div class="container mx-auto max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Natural Care, Now in Style</h1>
-            <p class="text-xl mb-8 fade-in" style="transition-delay: 0.2s">Long hair is not just beauty, it's a journey of patience, care, and love. Every strand tells a story of strength.</p>
-            <a href="#" class="bg-brand-gold text-brand-green font-bold py-3 px-8 rounded-full inline-block hover:bg-yellow-500 transition duration-300 transform hover:scale-105 glow bounce-in" style="transition-delay: 0.4s">
-                Shop Now
-            </a>
+    <section class="hero-section text-brand-beige py-20 px-4 text-center">
+        <div class="floating-leaves leaf-1">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10 C70 10, 90 30, 90 50 C90 70, 70 90, 50 90 C30 90, 10 70, 10 50 C10 30, 30 10, 50 10 Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="floating-leaves leaf-2">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10 C70 10, 90 30, 90 50 C90 70, 70 90, 50 90 C30 90, 10 70, 10 50 C10 30, 30 10, 50 10 Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in text-glow text-white">CREATED by NATURE CURATED by SANA</h1>
+            <p class="text-xl md:text-2xl mb-10 fade-in text-white" style="transition-delay: 0.2s">
+    Long hair is not just beauty, it's a journey of patience, care, and love. Every strand tells a story of strength.
+</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="transition-delay: 0.4s">
+                <a href="#" class="btn-primary bounce-in">
+                    Shop Collection <i class="ml-2 fas fa-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-outline bounce-in" style="transition-delay: 0.6s">
+                    Learn More
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Why Us Section -->
-<section class="py-16 px-4 bg-white">
-  <div class="container mx-auto">
- <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">
-  Why us you ask?
+    <section class="py-20 px-4 bg-white relative">
+        <div class="container mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-16 brand-green fade-in">
+    Why Choose Organo?
 </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 place-items-center">
-      
-      <!-- Woman Owned Business -->
-      <div class="text-center p-6 stagger-item hover-lift">
-        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
-          <img src="images/Woman Beauty Logotype _ Premium Vector.png" 
-               alt="Woman Owned Business" 
-               class="w-28 h-28 object-contain" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Woman Owned Business -->
+                <div class="feature-card p-6 text-center stagger-item hover-lift">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-brand-beige">
+                        <i class="fas fa-female text-4xl brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold brand-green mb-2">Woman Owned</h3>
+                    <p class="text-gray-600">Empowering women through natural beauty solutions</p>
+                </div>
+
+                <!-- Handmade With Love -->
+                <div class="feature-card p-6 text-center stagger-item hover-lift" style="transition-delay: 0.1s">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-brand-beige">
+                        <i class="fas fa-heart text-4xl brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold brand-green mb-2">Handcrafted</h3>
+                    <p class="text-gray-600">Each product made with care and attention to detail</p>
+                </div>
+
+                <!-- Made in Pakistan -->
+                <div class="feature-card p-6 text-center stagger-item hover-lift" style="transition-delay: 0.2s">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-brand-beige">
+                        <i class="fas fa-flag text-4xl brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold brand-green mb-2">Proudly Pakistani</h3>
+                    <p class="text-gray-600">Supporting local artisans and ingredients</p>
+                </div>
+
+                <!-- 100% Organic Ingredients -->
+                <div class="feature-card p-6 text-center stagger-item hover-lift" style="transition-delay: 0.3s">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-brand-beige">
+                        <i class="fas fa-leaf text-4xl brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold brand-green mb-2">100% Organic</h3>
+                    <p class="text-gray-600">Pure, natural ingredients for healthy hair and body</p>
+                </div>
+
+                <!-- New Arrivals -->
+                <div class="feature-card p-6 text-center stagger-item hover-lift" style="transition-delay: 0.4s">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-brand-beige">
+                        <i class="fas fa-gift text-4xl brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold brand-green mb-2">Fresh Collections</h3>
+                    <p class="text-gray-600">Regular new arrivals to explore</p>
+                </div>
+            </div>
         </div>
-        <h3 class="text-xl font-bold brand-green">Woman Owned Business</h3>
-      </div>
+    </section>
 
-      <!-- Handmade With Love -->
-      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.1s">
-        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
-          <img src="images/download (1).png" 
-               alt="Handmade With Love" 
-               class="w-28 h-28 object-contain" />
-        </div>
-        <h3 class="text-xl font-bold brand-green">Handmade With Love</h3>
-      </div>
+    <!-- Product Showcase -->
+    <section class="py-20 px-4 bg-brand-cream">
+        <div class="container mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-16 brand-green fade-in">Our Collections</h2>
+            
+            <div class="product-showcase p-8 md:p-12 mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h3 class="text-3xl font-bold brand-green mb-4">Signature Hair Oil</h3>
+                        <p class="text-lg text-gray-700 mb-6">Our premium blend of organic oils nourishes from root to tip, promoting growth and adding incredible shine.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-brand-gold mr-2"></i> Strengthens hair follicles</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-gold mr-2"></i> Reduces breakage and split ends</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-gold mr-2"></i> Adds natural shine and softness</li>
+                        </ul>
+                        <a href="#" class="btn-primary inline-block">Discover Now</a>
+                    </div>
+                    <div class="flex justify-center fade-in slide-in-right">
+                        <div class="relative">
+                            <img src="images/7 Benefits of Amla for Hair.png" alt="Hair Oil" class="rounded-2xl shadow-2xl max-w-full h-auto">
+                            <div class="absolute -bottom-4 -right-4 bg-brand-gold text-white px-4 py-2 rounded-full font-bold">
+                                Bestseller
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Made in Pakistan -->
-      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.2s">
-        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
-          <img src="images/madeinpakistan-removebg-preview.png" 
-               alt="Made in Pakistan" 
-               class="w-28 h-28 object-contain" />
-        </div>
-        <h3 class="text-xl font-bold brand-green">Made in Pakistan</h3>
-      </div>
-
-      <!-- 100% Organic Ingredients -->
-      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.3s">
-        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
-          <img src="images/organic.png" 
-               alt="Organic" 
-               class="w-28 h-28 object-contain" />
-        </div>
-        <h3 class="text-xl font-bold brand-green">100% Organic Ingredients</h3>
-      </div>
-
-      <!-- New Arrivals -->
-      <div class="text-center p-6 stagger-item hover-lift" style="transition-delay: 0.4s">
-        <div class="w-36 h-36 mx-auto mb-4 flex items-center justify-center rotate-hover">
-          <img src="images/newarrival.png" 
-               alt="New Arrivals" 
-               class="w-28 h-28 object-contain" />
-        </div>
-        <h3 class="text-xl font-bold brand-green">New Arrivals Regularly</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Category Section -->
-    <section class="py-16 px-4 bg-white">
-  <div class="container mx-auto text-center">
-   <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">Categories</h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
+            <!-- Category Section -->
+            <h3 class="text-3xl font-bold text-center mb-12 brand-green fade-in">Shop By Category</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
                 
                 <!-- Hair Oil -->
                 <div class="flex flex-col items-center stagger-item scale-on-hover">
-                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                    <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/7 Benefits of Amla for Hair.png" alt="Hair Oil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <p class="text-xl font-bold mt-4 brand-green">Hair Oil</p>
+                    <p class="text-xl font-bold brand-green">Hair Oil</p>
+                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
                 </div>
                 
                 <!-- Organic Soap -->
                 <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.1s">
-                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                    <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Organic Soaps By Organic Oasis.png" alt="Organic Soap" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <p class="text-xl font-bold mt-4 brand-green">Organic Soap</p>
+                    <p class="text-xl font-bold brand-green">Organic Soap</p>
+                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
                 </div>
                 
                 <!-- Protein Powder -->
                 <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.2s">
-                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                    <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png" alt="Protein Powder" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <p class="text-xl font-bold mt-4 brand-green">Protein Powder</p>
+                    <p class="text-xl font-bold brand-green">Protein Powder</p>
+                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
                 </div>
                 
                 <!-- Slim Tox -->
                 <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.3s">
-                    <div class="w-40 h-40 rounded-[40%] overflow-hidden shadow-lg hover-lift">
+                    <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Slim_Tox_AI.png" alt="Slim Tox" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <p class="text-xl font-bold mt-4 brand-green">Slim Tox</p>
+                    <p class="text-xl font-bold brand-green">Slim Tox</p>
+                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
                 </div>
                 
             </div>
@@ -361,102 +688,168 @@
     </section>
 
     <!-- Customer Reviews -->
-<section class="py-20 px-6 bg-white">
-  <div class="container mx-auto">
-    <h2 class="pt-8 text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 brand-green fade-in">
-      What Our Customers Say
-      <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-brand-gold rounded-full"></span>
-    </h2>
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-16 brand-green fade-in">
+                Customer Love
+            </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      
-      <!-- Review 1 -->
-      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-        <div class="flex items-center mb-5">
-          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-            A
-          </div>
-          <div class="ml-4">
-            <h4 class="font-semibold">Aisha Khan</h4>
-            <div class="text-brand-gold text-sm">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="review-card p-8">
+                    <div class="flex items-center mb-5">
+                        <div class="w-14 h-14 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-lg">Aisha Khan</h4>
+                            <div class="text-brand-gold text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">“The hair oil has transformed my dry, damaged hair. I've never received so many compliments! My hair feels stronger and looks shinier than ever before.”</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card p-8">
+                    <div class="flex items-center mb-5">
+                        <div class="w-14 h-14 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            F
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-lg">Fatima Z.</h4>
+                            <div class="text-brand-gold text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">“As someone with sensitive skin, I appreciate how gentle the organic soaps are. Will definitely repurchase! The natural fragrance is so refreshing.”</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card p-8">
+                    <div class="flex items-center mb-5">
+                        <div class="w-14 h-14 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            S
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-lg">Sana Ahmed</h4>
+                            <div class="text-brand-gold text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">“The protein powder mixes well and doesn't have that chalky taste. Perfect for my morning smoothies! I've noticed improved energy levels since using it.”</p>
+                </div>
+
             </div>
-          </div>
         </div>
-        <p class="text-gray-600 leading-relaxed">“The hair oil has transformed my dry, damaged hair. I've never received so many compliments!”</p>
-      </div>
+    </section>
 
-      <!-- Review 2 -->
-      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-        <div class="flex items-center mb-5">
-          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-            F
-          </div>
-          <div class="ml-4">
-            <h4 class="font-semibold">Fatima Z.</h4>
-            <div class="text-brand-gold text-sm">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4 bg-brand-green text-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="newsletter-form text-center">
+                <h2 class="text-3xl font-bold mb-4 text-black">Join Our Beauty Community</h2>
+                <p class="text-lg mb-8 text-black">Subscribe to receive exclusive offers, haircare tips, and news about new products.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address" class="newsletter-input flex-grow text-black">
+                    <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+                </form>
+                <p class="text-sm mt-4 text-gray-300">We respect your privacy. Unsubscribe at any time.</p>
             </div>
-          </div>
         </div>
-        <p class="text-gray-600 leading-relaxed">“As someone with sensitive skin, I appreciate how gentle the organic soaps are. Will definitely repurchase!”</p>
-      </div>
+    </section>
 
-      <!-- Review 3 -->
-      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-        <div class="flex items-center mb-5">
-          <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-            S
-          </div>
-          <div class="ml-4">
-            <h4 class="font-semibold">Sana Ahmed</h4>
-            <div class="text-brand-gold text-sm">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+    <!-- Instagram Feed -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-12 brand-green fade-in">
+                Follow Our Journey
+            </h2>
+            <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-10">See how our community is transforming their hair with Organo products. Share your results with #OrganoBySana</p>
+            
+            <div class="instagram-feed">
+                <!-- Post 1 -->
+                <div class="instagram-item">
+                    <a href="https://www.instagram.com/p/YOUR_POST_ID_1/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://placehold.co/300x300/2a4d2a/ffffff?text=Hair+Transformation" alt="Instagram post">
+                    </a>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="instagram-item">
+                    <a href="https://www.instagram.com/p/YOUR_POST_ID_2/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://placehold.co/300x300/3a6b3a/ffffff?text=Natural+Ingredients" alt="Instagram post">
+                    </a>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="instagram-item">
+                    <a href="https://www.instagram.com/p/YOUR_POST_ID_3/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://placehold.co/300x300/d4af37/ffffff?text=Product+Showcase" alt="Instagram post">
+                    </a>
+                </div>
+                
+                <!-- Post 4 -->
+                <div class="instagram-item">
+                    <a href="https://www.instagram.com/stories/highlights/18366326323147732/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://placehold.co/300x300/2a4d2a/ffffff?text=Customer+Love" alt="Instagram post">
+                    </a>
+                </div>
+                
+                <!-- Post 5 -->
+                <div class="instagram-item">
+                    <a href="https://www.instagram.com/p/YOUR_POST_ID_5/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://placehold.co/300x300/3a6b3a/ffffff?text=Behind+The+Scenes" alt="Instagram post">
+                    </a>
+                </div>
             </div>
-          </div>
+            
+            <div class="text-center mt-10">
+    <a href="https://www.instagram.com/organobysana/" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center">
+        <i class="fab fa-instagram mr-2"></i> Follow @OrganoBySana
+    </a>
+</div>
         </div>
-        <p class="text-gray-600 leading-relaxed">“The protein powder mixes well and doesn't have that chalky taste. Perfect for my morning smoothies!”</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Footer -->
     <footer class="bg-brand-green text-brand-beige py-12 px-4">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div class="fade-in">
-        <div class="flex items-center space-x-2 mb-4 -mt-9">
-          <img src="images/brand-logo.png" 
-               alt="Organo Logo" 
-               class="h-16 md:h-21 w-auto transition-transform duration-300 hover:scale-105" />
-        </div>
-                    <p class="mb-4">Natural care products handmade with love in Pakistan.</p>
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="fade-in">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="images/brand-logo.png" 
+                             alt="Organo Logo" 
+                             class="h-16 w-auto transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <p class="mb-6">Premium natural care products handmade with love in Pakistan. Transforming hair journeys with nature's finest ingredients.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
                 <div class="fade-in" style="transition-delay: 0.1s">
                     <h3 class="text-lg font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shop</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shop All</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Hair Oil</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Organic Soap</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Protein Powder</a></li>
@@ -465,41 +858,55 @@
                 </div>
                 
                 <div class="fade-in" style="transition-delay: 0.2s">
-                    <h3 class="text-lg font-bold mb-4">About</h3>
+                    <h3 class="text-lg font-bold mb-4">Support</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">FAQs</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Terms & Conditions</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shipping Policy</a></li>
                     </ul>
                 </div>
                 
                 <div class="fade-in" style="transition-delay: 0.3s">
                     <h3 class="text-lg font-bold mb-4">Contact Us</h3>
-                    <ul class="space-y-2">
+                    <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2 text-brand-gold"></i>
+                            <i class="fas fa-map-marker-alt mr-3 text-brand-gold"></i>
                             <span>Lahore, Pakistan</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-phone mr-2 text-brand-gold"></i>
+                            <i class="fas fa-phone mr-3 text-brand-gold"></i>
                             <span>+92 300 1234567</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-brand-gold"></i>
+                            <i class="fas fa-envelope mr-3 text-brand-gold"></i>
                             <span>info@organobysana.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-brand-gold"></i>
+                            <span>Mon-Fri: 9AM-6PM</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-brand-beige/20 mt-8 pt-8 text-center fade-in" style="transition-delay: 0.4s">
-                <p>© 2025 Organo By Sana. All rights reserved.</p>
+            <div class="border-t border-brand-beige/20 mt-10 pt-8 text-center fade-in" style="transition-delay: 0.4s">
+                <p>© 2025 Organo By Sana. All rights reserved. Crafted with <i class="fas fa-heart text-red-400"></i> in Pakistan</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
         // Mobile menu functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -558,12 +965,8 @@
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('nav-scroll');
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-7');
             } else {
                 navbar.classList.remove('nav-scroll');
-                navbar.classList.remove('py-4');
-                navbar.classList.add('py-7');
             }
         }
 
@@ -576,6 +979,8 @@
             setTimeout(() => {
                 document.querySelector('.hero-section h1').classList.add('visible');
                 document.querySelector('.hero-section p').classList.add('visible');
+                document.querySelector('.hero-section .btn-primary').classList.add('visible');
+                document.querySelector('.hero-section .btn-outline').classList.add('visible');
             }, 300);
         });
 
@@ -604,20 +1009,22 @@
                 }, 300);
             });
         });
-         document.addEventListener("DOMContentLoaded", () => {
-    const fadeElements = document.querySelectorAll('.fade-in, .stagger-item, .slide-in-left, .slide-in-right');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // animate once
-        }
-      });
-    }, { threshold: 0.1 });
+        // Intersection Observer for animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeElements = document.querySelectorAll('.fade-in, .stagger-item, .slide-in-left, .slide-in-right');
 
-    fadeElements.forEach(el => observer.observe(el));
-  });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // animate once
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 </html>
