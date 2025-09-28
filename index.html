@@ -191,7 +191,25 @@
     margin-bottom: 3rem;
     width: 100%; 
 }
-        
+        /* Footer text color */
+            footer,
+            footer *:not(i) {
+                color: white !important;
+            }
+
+            /* Ensure specific elements are white */
+            footer p,
+            footer span,
+            footer li,
+            footer a,
+            footer h3 {
+                color: white !important;
+            }
+
+            /* Footer links hover effect */
+            footer a:hover {
+                color: #d4af37 !important; /* Keep your gold hover color */
+            }
         .section-title::after {
             content: '';
             position: absolute;
@@ -482,21 +500,21 @@
         </a>
         <div class="dropdown-menu absolute hidden bg-white text-brand-green shadow-lg rounded-md mt-2 py-2 w-52 transform origin-top transition-all duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100">
             <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">All Products</a>
-            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
-            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
-            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
-            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
+            <a href="hair-oil-product.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
+            <a href="organic-soap.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
+            <a href="protein-powder.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
+            <a href="slim-tox.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
         </div>
     </div>
-    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
+    <a href="contact.html" class="text-white hover:text-brand-gold transition duration-300 relative group">
         Contact
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
     </a>
     <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
-        FAQs
+        Login
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
     </a>
-    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
+    <a href="aboutus.html" class="text-white hover:text-brand-gold transition duration-300 relative group">
         About Us
         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
     </a>
@@ -519,15 +537,15 @@
         </a>
         <div class="pl-4 mt-2 hidden transition-all duration-300" id="mobile-shop-menu">
             <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">All Products</a>
-            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
-            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
-            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
-            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
+            <a href="hair-oil-product.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
+            <a href="organic-soap.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
+            <a href="protein-powder.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
+            <a href="slim-tox.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
         </div>
     </div>
-    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Contact</a>
-    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">FAQs</a>
-    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">About Us</a>
+    <a href="contact.html" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Contact</a>
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Login</a>
+    <a href="aboutus.html" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">About Us</a>
 </div>
     </nav>
 
@@ -546,7 +564,7 @@
         <div class="container mx-auto max-w-4xl relative z-10">
             <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in text-glow text-white">CREATED by NATURE CURATED by SANA</h1>
             <p class="text-xl md:text-2xl mb-10 fade-in text-white" style="transition-delay: 0.2s">
-    Long hair is not just beauty, it's a journey of patience, care, and love. Every strand tells a story of strength.
+    To provide trustworthy and affordable personal care solutions crafted with natural, organic ingredients and packaged with care — empowering individuals to live healthier, more confident lives.
 </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="transition-delay: 0.4s">
                 <a href="#" class="btn-primary bounce-in">
@@ -646,42 +664,42 @@
             <!-- Category Section -->
             <h3 class="text-3xl font-bold text-center mb-12 brand-green fade-in">Shop By Category</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 place-items-center">
-                
-                <!-- Hair Oil -->
-                <div class="flex flex-col items-center stagger-item scale-on-hover">
-                    <div class="category-circle overflow-hidden shadow-lg mb-4">
-                        <img src="images/7 Benefits of Amla for Hair.png" alt="Hair Oil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <p class="text-xl font-bold brand-green">Hair Oil</p>
-                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
-                </div>
+
+                                <!-- Hair Oil -->
+                    <a href="hair-oil-product.html" class="flex flex-col items-center stagger-item scale-on-hover">
+                        <div class="category-circle overflow-hidden shadow-lg mb-4">
+                            <img src="images/7 Benefits of Amla for Hair.png" alt="Hair Oil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <p class="text-xl font-bold brand-green">Hair Oil</p>
+                        <span class="text-sm text-brand-gold mt-2 hover:underline">Explore →</span>
+                    </a>
                 
                 <!-- Organic Soap -->
-                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.1s">
+                <a href="organic-soap.html" class="flex flex-col items-center stagger-item scale-on-hover">
                     <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Organic Soaps By Organic Oasis.png" alt="Organic Soap" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <p class="text-xl font-bold brand-green">Organic Soap</p>
-                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
-                </div>
+                   <span class="text-sm text-brand-gold mt-2 hover:underline">Explore →</span>
+                 </a>
                 
                 <!-- Protein Powder -->
-                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.2s">
+                <a href="protein-powder.html" class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.2s">
                     <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png" alt="Protein Powder" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <p class="text-xl font-bold brand-green">Protein Powder</p>
-                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
-                </div>
+                    <span class="text-sm text-brand-gold mt-2 hover:underline">Explore →</span>
+                 </a>
                 
                 <!-- Slim Tox -->
-                <div class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.3s">
+                <a href="slim-tox.html" class="flex flex-col items-center stagger-item scale-on-hover" style="transition-delay: 0.3s">
                     <div class="category-circle overflow-hidden shadow-lg mb-4">
                         <img src="images/Slim_Tox_AI.png" alt="Slim Tox" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <p class="text-xl font-bold brand-green">Slim Tox</p>
-                    <a href="#" class="text-sm text-brand-gold mt-2 hover:underline">Explore →</a>
-                </div>
+                    <span class="text-sm text-brand-gold mt-2 hover:underline">Explore →</span>
+                </a>
                 
             </div>
         </div>
@@ -838,7 +856,7 @@
                              alt="Organo Logo" 
                              class="h-16 w-auto transition-transform duration-300 hover:scale-105" />
                     </div>
-                    <p class="mb-6">Premium natural care products handmade with love in Pakistan. Transforming hair journeys with nature's finest ingredients.</p>
+                    <p class="mb-6">Symbol of care and purity, offering products crafted with a deep respect for nature and a commitment to overall well-being.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-instagram"></i></a>
@@ -860,7 +878,7 @@
                 <div class="fade-in" style="transition-delay: 0.2s">
                     <h3 class="text-lg font-bold mb-4">Support</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">FAQs</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Login</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Terms & Conditions</a></li>
                         <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Privacy Policy</a></li>
@@ -876,7 +894,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-brand-gold"></i>
-                            <span>+92 300 1234567</span>
+                            <span>0330-1658921</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-brand-gold"></i>

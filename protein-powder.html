@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Protein Powder - Organo By Sana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-green: #2a4d2a;
+            --brand-light-green: #3a6b3a;
+            --brand-beige: #F8F4E9;
+            --brand-gold: #d4af37;
+            --brand-brown: #3C2E2A;
+            --brand-cream: #FFFBF0;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--brand-cream);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .brand-green { color: var(--brand-green); }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .brand-light-green { color: var(--brand-light-green); }
+        .bg-brand-light-green { background-color: var(--brand-light-green); }
+        .brand-beige { color: var(--brand-beige); }
+        .bg-brand-beige { background-color: var(--brand-beige); }
+        .brand-gold { color: var(--brand-gold); }
+        .bg-brand-gold { background-color: var(--brand-gold); }
+        .brand-brown { color: var(--brand-brown); }
+        .bg-brand-brown { background-color: var(--brand-brown); }
+        .brand-cream { color: var(--brand-cream); }
+        .bg-brand-cream { background-color: var(--brand-cream); }
+        
+        /* Animation classes from homepage */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .slide-in-left {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+        
+        .slide-in-left.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .slide-in-right {
+            transform: translateX(50px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+        
+        .slide-in-right.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .stagger-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-scroll {
+            background-color: rgba(42, 77, 42, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .scale-on-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .scale-on-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        .section-title {
+            position: relative;
+            display: block; 
+            margin-bottom: 3rem;
+            width: 100%; 
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--brand-gold);
+        }
+        
+        /* Product-specific styles */
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--brand-gold);
+            background: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quantity-btn:hover {
+            background: var(--brand-gold);
+            color: white;
+        }
+        
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            border: 2px solid var(--brand-gold);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-button {
+            background: white;
+            border: 2px solid var(--brand-beige);
+            padding: 15px 25px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .tab-button.active {
+            background: var(--brand-green);
+            color: white;
+            border-color: var(--brand-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42, 77, 42, 0.2);
+        }
+        
+        .tab-button:hover {
+            border-color: var(--brand-gold);
+            transform: translateY(-2px);
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            background-color: rgba(248, 244, 233, 0.5);
+            transform: translateX(5px);
+        }
+        
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--brand-gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .size-option {
+            padding: 12px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .size-option.active, .size-option:hover {
+            border-color: var(--brand-gold);
+            background-color: var(--brand-gold);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-green), var(--brand-gold));
+        }
+        
+        .review-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 120px;
+            color: var(--brand-gold);
+            opacity: 0.1;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-gold), #f1c40f);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--brand-gold);
+            color: var(--brand-gold);
+            background: transparent;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--brand-gold);
+            color: white;
+        }
+        
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .image-gallery-thumbnail {
+            border: 2px solid transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover {
+            border-color: var(--brand-gold);
+            transform: scale(1.05);
+        }
+        
+        .ingredient-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--brand-green), var(--brand-gold));
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .progress-step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--brand-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .progress-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 30px;
+            height: 2px;
+            background: var(--brand-beige);
+        }
+        
+        .progress-step:last-child::after {
+            display: none;
+        }
+        
+        .progress-step.active {
+            background: var(--brand-gold);
+            color: white;
+        }
+        
+        .progress-step.active::after {
+            background: var(--brand-gold);
+        }
+        
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--brand-cream);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 5px solid rgba(212, 175, 55, 0.2);
+            border-top-color: var(--brand-gold);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Floating elements */
+        .floating-leaves {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .leaf-1 {
+            top: 10%;
+            left: 5%;
+            animation: float-leaf 20s infinite linear;
+        }
+        
+        .leaf-2 {
+            bottom: 15%;
+            right: 8%;
+            animation: float-leaf 25s infinite linear reverse;
+        }
+        
+        @keyframes float-leaf {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        /* Footer text color */
+        footer,
+        footer *:not(i) {
+            color: white !important;
+        }
+
+        /* Ensure specific elements are white */
+        footer p,
+        footer span,
+        footer li,
+        footer a,
+        footer h3 {
+            color: white !important;
+        }
+
+        /* Footer links hover effect */
+        footer a:hover {
+            color: #d4af37 !important; /* Keep your gold hover color */
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-brown">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-brand-green text-brand-beige py-6 px-6 fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Side: Search and Cart Icons -->
+            <div class="flex items-center space-x-5">
+                <!-- Search Icon -->
+            <button class="text-white hover:text-brand-gold transition duration-300 transform hover:scale-110">
+                <i class="fas fa-search text-xl"></i>
+            </button>
+
+            <!-- Cart Icon -->
+            <button class="text-white hover:text-brand-gold transition duration-300 relative transform hover:scale-110">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="absolute -top-2 -right-2 bg-brand-gold text-brand-green text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold pulse">0</span>
+            </button>
+            </div>
+
+            <!-- Centered Logo -->
+            <div class="flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
+                <img src="images/brand-logo.png" 
+                     alt="Organo Logo" 
+                     class="h-20 w-auto transition-transform duration-300 hover:scale-105" />
+            </div>
+
+            <!-- Desktop Menu -->
+<div class="hidden md:flex space-x-10 text-lg">
+    <a href="index.html" class="text-white hover:text-brand-gold transition duration-300 relative group">
+        Home
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <div class="dropdown relative">
+        <a href="#" class="text-white hover:text-brand-gold transition duration-300 flex items-center relative group">
+            Shop <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <div class="dropdown-menu absolute hidden bg-white text-brand-green shadow-lg rounded-md mt-2 py-2 w-52 transform origin-top transition-all duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100">
+            <a href="#" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">All Products</a>
+            <a href="hair-oil-product.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Hair Oil</a>
+            <a href="organic-soap.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Organic Soap</a>
+            <a href="protein-powder.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Protein Powder</a>
+            <a href="slim-tox.html" class="block px-4 py-2 hover:bg-brand-beige transition duration-200">Slim Tox</a>
+        </div>
+    </div>
+    <a href="contact.html" class="text-white hover:text-brand-gold transition duration-300 relative group">
+        Contact
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <a href="#" class="text-white hover:text-brand-gold transition duration-300 relative group">
+        Login
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+    </a>
+    <a href="aboutus.html" class="text-white hover:text-brand-gold transition duration-300 relative group">
+        About Us
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+    </a>
+</div>
+
+<!-- Mobile Menu Button -->
+<div class="md:hidden">
+    <button id="mobile-menu-button" class="text-white transform transition duration-300 hover:scale-110">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-brand-green mt-4 pb-4 transition-all duration-300 transform origin-top scale-95">
+    <a href="index.html" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Home</a>
+    <div class="py-2 px-4">
+        <a href="#" class="flex justify-between items-center text-white hover:bg-brand-brown/20 transition duration-200">
+            Shop <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </a>
+        <div class="pl-4 mt-2 hidden transition-all duration-300" id="mobile-shop-menu">
+            <a href="#" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">All Products</a>
+            <a href="hair-oil-product.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Hair Oil</a>
+            <a href="organic-soap.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Organic Soap</a>
+            <a href="protein-powder.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Protein Powder</a>
+            <a href="slim-tox.html" class="block py-1 text-white hover:bg-brand-brown/20 transition duration-200">Slim Tox</a>
+        </div>
+    </div>
+    <a href="contact.html" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Contact</a>
+    <a href="#" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">Login</a>
+    <a href="aboutus.html" class="block py-2 px-4 text-white hover:bg-brand-brown/20 transition duration-200">About Us</a>
+</div>
+    </nav>
+    <!-- Product Hero Section -->
+    <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-white to-brand-cream relative overflow-hidden">
+        
+        <div class="container mx-auto">
+            <!-- Breadcrumb -->
+            <div class="mb-8 fade-in">
+                <a href="index.html" class="text-brand-green hover:text-brand-gold transition duration-300">Home</a> 
+                <span class="mx-2 text-brand-gold">/</span>
+                <a href="#" class="text-brand-green hover:text-brand-gold transition duration-300">Shop</a>
+                <span class="mx-2 text-brand-gold">/</span>
+                <span class="text-brand-gold font-semibold">Protein Powder</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Product Images -->
+                <div class="space-y-6 fade-in slide-in-left">
+                    <div class="product-card p-8 relative">
+                        <div class="absolute top-4 right-4 bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-bold z-10">
+                            Bestseller
+                        </div>
+                        <div role="img" aria-labelledby="main-image-caption">
+                            <img id="main-product-image" src="images/protein-powder-main.png" alt="Plant Protein Powder" class="w-full h-96 object-contain floating">
+                            <p id="main-image-caption" class="sr-only">Main product image</p>
+                        </div>
+                        <span id="image-update-announcer" class="sr-only" aria-live="polite"></span>
+                    </div>
+                    <div id="thumbnails" class="grid grid-cols-4 gap-4">
+                        <div class="image-gallery-thumbnail active" data-image="images/protein-powder-main.png" role="button" tabindex="0" aria-pressed="true" aria-label="Show Protein Powder main">
+                            <img src="images/protein-powder-main.png" alt="Protein Powder main" class="w-full h-20 object-cover" loading="lazy">
+                        </div>
+                        <div class="image-gallery-thumbnail" data-image="images/protein-powder-vanilla.png" role="button" tabindex="0" aria-pressed="false" aria-label="Show Vanilla flavor">
+                            <img src="images/protein-powder-vanilla.png" alt="Vanilla flavor" class="w-full h-20 object-cover" loading="lazy">
+                        </div>
+                        <div class="image-gallery-thumbnail" data-image="images/protein-powder-chocolate.png" role="button" tabindex="0" aria-pressed="false" aria-label="Show Chocolate flavor">
+                            <img src="images/protein-powder-chocolate.png" alt="Chocolate flavor" class="w-full h-20 object-cover" loading="lazy">
+                        </div>
+                        <div class="image-gallery-thumbnail" data-image="images/protein-powder-serving.png" role="button" tabindex="0" aria-pressed="false" aria-label="Show serving suggestion">
+                            <img src="images/protein-powder-serving.png" alt="Serving suggestion" class="w-full h-20 object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="space-y-6 fade-in slide-in-right">
+                    <!-- Product Title -->
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold brand-green">Protein Powder</h1>
+                        <div class="flex items-center mt-4">
+                            <div class="text-brand-gold text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">(142 reviews)</span>
+                            <span class="ml-4 bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">In Stock</span>
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="text-3xl font-bold text-brand-green">
+                        Rs. 2,199
+                        <span class="text-lg text-gray-500 line-through ml-2">Rs. 2,799</span>
+                        <span class="text-sm bg-red-100 text-red-600 px-2 py-1 rounded ml-2">21% OFF</span>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold brand-green">Key Benefits:</h3>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <span>Supports muscle recovery and growth</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span>100% plant-based and vegan friendly</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span>Provides sustained energy throughout the day</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Complete amino acid profile for optimal nutrition</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <span>Easy to digest, no bloating or discomfort</span>
+                        </div>
+                    </div>
+
+                    <!-- Flavor Selection -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold brand-green">Flavor:</h3>
+                        <div class="flex space-x-4">
+                            <div class="size-option active" data-size="vanilla">
+                                Vanilla
+                            </div>
+                            <div class="size-option" data-size="chocolate">
+                                Chocolate <span class="text-xs block mt-1">(Most Popular)</span>
+                            </div>
+                            <div class="size-option" data-size="natural">
+                                Natural <span class="text-xs block mt-1">(No Added Sugar)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold brand-green">Size:</h3>
+                        <div class="flex space-x-4">
+                            <div class="size-option active" data-size="500g">
+                                500g (16 Servings)
+                            </div>
+                            <div class="size-option" data-size="1kg">
+                                1kg (32 Servings) <span class="text-xs block mt-1">(Best Value)</span>
+                            </div>
+                            <div class="size-option" data-size="2kg">
+                                2kg (64 Servings) <span class="text-xs block mt-1">(Family Pack)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quantity and Add to Cart -->
+                    <div class="flex items-center space-x-6 pt-4">
+                        <button class="btn-primary bounce-in flex items-center justify-center px-8 py-4 text-lg w-80">
+                            <i class="fas fa-shopping-cart mr-3"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Tabs -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap gap-4 mb-8 justify-center">
+                    <button class="tab-button active" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="how-to-use">How to Use</button>
+                    <button class="tab-button" data-tab="ingredients">Ingredients</button>
+                    <button class="tab-button" data-tab="reviews">Reviews</button>
+                    <button class="tab-button" data-tab="faqs">FAQs</button>
+                </div>
+
+                <div class="product-card p-8 md:p-12">
+                    <!-- Description Tab -->
+                    <div id="description" class="tab-content active">
+                        <h3 class="text-2xl font-bold brand-green mb-6">Product Description</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Our Plant Protein Powder is a premium blend of nature's finest plant proteins, carefully formulated to support your fitness goals and nutritional needs. 
+                            This complete protein source provides all essential amino acids in an easily digestible form that fuels muscle recovery, supports weight management, 
+                            and delivers sustained energy without the common digestive issues associated with other protein supplements.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 brand-green">Key Features:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-brand-gold mr-3 mt-1"></i>
+                                        <span>22g complete protein per serving</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-brand-gold mr-3 mt-1"></i>
+                                        <span>100% plant-based and vegan certified</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-brand-gold mr-3 mt-1"></i>
+                                        <span>Free from artificial sweeteners and preservatives</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-brand-gold mr-3 mt-1"></i>
+                                        <span>Easy to mix with no chalky aftertaste</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-brand-gold mr-3 mt-1"></i>
+                                        <span>Made in Pakistan with premium ingredients</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 brand-green">Ideal For:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-brand-gold mr-3 mt-1"></i>
+                                        <span>Post-workout muscle recovery</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-brand-gold mr-3 mt-1"></i>
+                                        <span>Weight management and meal replacement</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-brand-gold mr-3 mt-1"></i>
+                                        <span>Vegetarian and vegan diets</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-brand-gold mr-3 mt-1"></i>
+                                        <span>Active lifestyle nutrition</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-brand-gold mr-3 mt-1"></i>
+                                        <span>General health and wellness</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How to Use Tab -->
+                    <div id="how-to-use" class="tab-content">
+                        <h3 class="text-2xl font-bold brand-green mb-6">How to Use for Best Results</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="progress-step active">1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg brand-green">Measure</h4>
+                                    <p class="text-gray-700">Add one scoop (approximately 30g) to 250-300ml of cold water, milk, or your preferred plant-based milk alternative.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="progress-step">2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg brand-green">Mix</h4>
+                                    <p class="text-gray-700">Shake vigorously in a shaker bottle or blend for 30-45 seconds until completely smooth and lump-free.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="progress-step">3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg brand-green">Timing</h4>
+                                    <p class="text-gray-700">Consume within 30 minutes after exercise for optimal muscle recovery, or as a meal replacement between meals.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="progress-step">4</div>
+                                <div>
+                                    <h4 class="font-bold text-lg brand-green">Frequency</h4>
+                                    <p class="text-gray-700">Use 1-2 times daily based on your protein requirements and activity level. Consult with a nutritionist for personalized guidance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-6 bg-brand-beige rounded-lg">
+                            <h4 class="font-bold text-lg brand-green mb-3">Recipe Ideas:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Protein Smoothie:</strong> Blend with banana, berries, and almond milk</li>
+                                <li><strong>Protein Oats:</strong> Mix into your morning oatmeal</li>
+                                <li><strong>Protein Pancakes:</strong> Add to your pancake batter</li>
+                                <li><strong>Energy Balls:</strong> Combine with dates, nuts, and coconut</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients Tab -->
+                    <div id="ingredients" class="tab-content">
+                        <h3 class="text-2xl font-bold brand-green mb-6">Premium Ingredients</h3>
+                        <p class="text-gray-700 mb-6">Our Plant Protein Powder contains only the highest quality plant-based ingredients, carefully selected for their nutritional benefits and excellent taste profile.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 brand-green">Protein Blend:</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Pea Protein</span>
+                                            <span class="text-brand-gold font-bold">40%</span>
+                                        </div>
+                                        <div class="ingredient-bar" style="width: 40%"></div>
+                                        <p class="text-sm text-gray-600">Rich in branched-chain amino acids</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Brown Rice Protein</span>
+                                            <span class="text-brand-gold font-bold">30%</span>
+                                        </div>
+                                        <div class="ingredient-bar" style="width: 30%"></div>
+                                        <p class="text-sm text-gray-600">Easy to digest with complete amino profile</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Hemp Protein</span>
+                                            <span class="text-brand-gold font-bold">15%</span>
+                                        </div>
+                                        <div class="ingredient-bar" style="width: 15%"></div>
+                                        <p class="text-sm text-gray-600">Contains omega-3 fatty acids</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Pumpkin Seed Protein</span>
+                                            <span class="text-brand-gold font-bold">10%</span>
+                                        </div>
+                                        <div class="ingredient-bar" style="width: 10%"></div>
+                                        <p class="text-sm text-gray-600">Rich in magnesium and zinc</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Natural Flavors & Sweeteners</span>
+                                            <span class="text-brand-gold font-bold">5%</span>
+                                        </div>
+                                        <div class="ingredient-bar" style="width: 5%"></div>
+                                        <p class="text-sm text-gray-600">Stevia and natural cocoa/vanilla</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 brand-green">Nutritional Highlights:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-leaf text-brand-gold mr-3 mt-1"></i>
+                                        <div>
+                                            <span class="font-semibold">Complete Amino Acid Profile</span>
+                                            <p class="text-sm text-gray-600">All 9 essential amino acids for muscle synthesis</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-leaf text-brand-gold mr-3 mt-1"></i>
+                                        <div>
+                                            <span class="font-semibold">Digestive Enzymes</span>
+                                            <p class="text-sm text-gray-600">Added papain and bromelain for better digestion</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-leaf text-brand-gold mr-3 mt-1"></i>
+                                        <div>
+                                            <span class="font-semibold">No Common Allergens</span>
+                                            <p class="text-sm text-gray-600">Free from dairy, soy, gluten, and GMOs</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-leaf text-brand-gold mr-3 mt-1"></i>
+                                        <div>
+                                            <span class="font-semibold">Added Fiber</span>
+                                            <p class="text-sm text-gray-600">Contains acacia fiber for digestive health</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-leaf text-brand-gold mr-3 mt-1"></i>
+                                        <div>
+                                            <span class="font-semibold">Essential Minerals</span>
+                                            <p class="text-sm text-gray-600">Naturally rich in iron, magnesium, and zinc</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div id="reviews" class="tab-content">
+                        <h3 class="text-2xl font-bold brand-green mb-6">Customer Reviews</h3>
+                        
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                            <div class="mb-4 md:mb-0">
+                                <div class="text-4xl font-bold brand-green">4.7</div>
+                                <div class="text-brand-gold text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="text-gray-600">Based on 142 reviews</div>
+                            </div>
+                            <button class="btn-outline">
+                                <i class="fas fa-pen mr-2"></i> Write a Review
+                            </button>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- Review 1 -->
+                            <div class="review-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            A
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg">Ahmed Khan</h4>
+                                            <div class="text-brand-gold text-sm">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-500">2 weeks ago</span>
+                                </div>
+                                <p class="text-gray-700">This protein powder has completely transformed my fitness routine! As a vegetarian, I struggled to find a good protein source that didn't cause bloating. This mixes perfectly, tastes great, and has noticeably improved my recovery after workouts. My strength has increased significantly in just one month of use.</p>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            F
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg">Fatima Z.</h4>
+                                            <div class="text-brand-gold text-sm">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-500">1 month ago</span>
+                                </div>
+                                <p class="text-gray-700">The chocolate flavor is amazing - not too sweet and no artificial aftertaste. I've tried many plant proteins that were chalky or hard to mix, but this one blends smoothly even with just a shaker bottle. It keeps me full for hours and has helped me maintain my weight while building lean muscle. Will definitely repurchase!</p>
+                            </div>
+                            
+                            <!-- Review 3 -->
+                            <div class="review-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            S
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg">Sana Ahmed</h4>
+                                            <div class="text-brand-gold text-sm">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-500">3 months ago</span>
+                                </div>
+                                <p class="text-gray-700">I've been using this protein powder for three months now, and the results are incredible! As someone with a sensitive stomach, I appreciate how easily digestible it is. My energy levels have improved, and I've noticed better muscle definition. I love that it's made with natural ingredients and supports local Pakistani production. Highly recommend to anyone looking for a clean, effective protein supplement!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-8">
+                            <button class="btn-outline">Load More Reviews</button>
+                        </div>
+                    </div>
+
+                    <!-- FAQs Tab -->
+                    <div id="faqs" class="tab-content">
+                        <h3 class="text-2xl font-bold brand-green mb-6">Frequently Asked Questions</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="faq-item border-b border-gray-200 pb-4">
+                                <button class="faq-question w-full text-left font-semibold text-lg brand-green flex justify-between items-center">
+                                    How soon will I see results from using this protein powder?
+                                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                </button>
+                                <div class="faq-answer mt-2 text-gray-700 hidden">
+                                    Most customers notice improved energy levels and reduced muscle soreness within the first week. Significant improvements in muscle recovery and strength are typically noticeable after 3-4 weeks of consistent use combined with regular exercise. Individual results may vary based on diet, exercise routine, and overall lifestyle.
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item border-b border-gray-200 pb-4">
+                                <button class="faq-question w-full text-left font-semibold text-lg brand-green flex justify-between items-center">
+                                    Is this protein powder suitable for beginners?
+                                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                </button>
+                                <div class="faq-answer mt-2 text-gray-700 hidden">
+                                    Yes, our Plant Protein Powder is perfect for beginners! It's gentle on the digestive system and provides a clean source of protein without overwhelming your system. Start with one serving daily and gradually increase based on your protein needs and activity level. Many beginners find it helps them maintain energy throughout their new fitness journey.
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item border-b border-gray-200 pb-4">
+                                <button class="faq-question w-full text-left font-semibold text-lg brand-green flex justify-between items-center">
+                                    Can I use this protein powder for weight loss?
+                                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                </button>
+                                <div class="faq-answer mt-2 text-gray-700 hidden">
+                                    Absolutely! Protein is essential for weight management as it helps maintain muscle mass while losing fat, keeps you feeling full longer, and supports metabolism. Use it as a meal replacement for breakfast or lunch, or as a healthy snack between meals. Combined with a balanced diet and regular exercise, it can be an effective tool for weight management.
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item border-b border-gray-200 pb-4">
+                                <button class="faq-question w-full text-left font-semibold text-lg brand-green flex justify-between items-center">
+                                    Is this product suitable for people with dietary restrictions?
+                                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                </button>
+                                <div class="faq-answer mt-2 text-gray-700 hidden">
+                                    Yes! Our Plant Protein Powder is vegan, gluten-free, dairy-free, soy-free, and non-GMO. It's suitable for most dietary restrictions. However, if you have specific allergies or medical conditions, we recommend consulting with your healthcare provider before use. The ingredients list is clearly labeled for your convenience.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="py-16 px-4 bg-brand-cream">
+        <div class="container mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-12 brand-green fade-in">You Might Also Like</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card hover-lift">
+                    <div class="p-4">
+                        <img src="images/hair-oil.png" alt="Hair Oil" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg brand-green mb-2">Signature Hair Oil</h3>
+                        <div class="text-brand-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold brand-green">Rs. 1,499</span>
+                            <button class="bg-brand-gold text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card hover-lift">
+                    <div class="p-4">
+                        <img src="images/Organic Soaps By Organic Oasis.png" alt="Organic Soap" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg brand-green mb-2">Lavender Organic Soap</h3>
+                        <div class="text-brand-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold brand-green">Rs. 599</span>
+                            <button class="bg-brand-gold text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card hover-lift">
+                    <div class="p-4">
+                        <img src="images/Slim_Tox_AI.png" alt="Slim Tox" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg brand-green mb-2">Slim Tox Tea</h3>
+                        <div class="text-brand-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold brand-green">Rs. 899</span>
+                            <button class="bg-brand-gold text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4 bg-brand-green text-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold mb-4 brand-green">Join Our Wellness Community</h2>
+                <p class="text-lg mb-8 text-gray-700">Subscribe to receive exclusive offers, nutrition tips, recipes, and news about new products.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-gold text-black">
+                    <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+                </form>
+                <p class="text-sm mt-4 text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-green text-brand-beige py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="fade-in">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="images/brand-logo.png" 
+                             alt="Organo Logo" 
+                             class="h-16 w-auto transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <p class="mb-6">Premium natural nutrition products crafted with nature's finest ingredients to support your wellness journey and active lifestyle.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-light-green flex items-center justify-center text-brand-beige hover:text-brand-gold transform hover:scale-110 transition duration-300"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.1s">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Home</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shop All</a></li>
+                        <li><a href="hair-oil-product.html" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Hair Oil</a></li>
+                        <li><a href="organic-soap.html" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Organic Soap</a></li>
+                        <li><a href="protein-powder.html" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Protein Powder</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.2s">
+                    <h3 class="text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">FAQs</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 transform hover:translate-x-1 inline-block">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.3s">
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-brand-gold"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-brand-gold"></i>
+                            <span>0330-1658921</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-brand-gold"></i>
+                            <span>info@organobysana.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-brand-gold"></i>
+                            <span>Mon-Fri: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-beige/20 mt-10 pt-8 text-center fade-in" style="transition-delay: 0.4s">
+                <p>© 2025 Organo By Sana. All rights reserved. Crafted with <i class="fas fa-heart text-red-400"></i> in Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle animation class
+            if (!mobileMenu.classList.contains('hidden')) {
+                setTimeout(() => {
+                    mobileMenu.classList.remove('scale-95');
+                }, 10);
+            } else {
+                mobileMenu.classList.add('scale-95');
+            }
+        });
+
+        // Mobile shop menu functionality
+        const mobileShopLink = document.querySelector('#mobile-menu a[href="#"]');
+        if (mobileShopLink) {
+            mobileShopLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const mobileShopMenu = document.getElementById('mobile-shop-menu');
+                mobileShopMenu.classList.toggle('hidden');
+                
+                // Rotate the chevron icon
+                const chevron = this.querySelector('i');
+                chevron.classList.toggle('rotate-180');
+            });
+        }
+
+        // Scroll animations
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stagger-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                // Check if element is in viewport
+                if (elementTop < window.innerHeight - 50 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+          // Add hover effect to dropdown menu - THIS IS MISSING FROM HAIR OIL PAGE
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('mouseenter', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        menu.classList.remove('hidden');
+        setTimeout(() => {
+            menu.classList.remove('scale-95', 'opacity-0');
+        }, 10);
+    });
+    
+    dropdown.addEventListener('mouseleave', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        menu.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+            menu.classList.add('hidden');
+        }, 300);
+    });
+});
+        // Navbar scroll effect
+        function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scroll');
+            } else {
+                navbar.classList.remove('nav-scroll');
+            }
+        }
+
+        // Initialize animations on page load
+        window.addEventListener('load', function() {
+            checkVisibility();
+            handleNavbarScroll();
+            
+            // Add a slight delay to hero animations for better effect
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }, 300);
+        });
+
+        // Check visibility on scroll
+        window.addEventListener('scroll', function() {
+            checkVisibility();
+            handleNavbarScroll();
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Quantity functionality
+        const quantityInput = document.querySelector('.quantity-input');
+        const decreaseBtn = document.querySelector('.quantity-btn:first-child');
+        const increaseBtn = document.querySelector('.quantity-btn:last-child');
+
+        if (decreaseBtn && increaseBtn && quantityInput) {
+          decreaseBtn.addEventListener('click', function () {
+            if (parseInt(quantityInput.value) > 1) {
+              quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+          });
+          increaseBtn.addEventListener('click', function () {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+          });
+        }
+
+        // Image gallery functionality
+        (function () {
+          const thumbsContainer = document.getElementById('thumbnails');
+          const mainImage = document.getElementById('main-product-image');
+          const announcer = document.getElementById('image-update-announcer');
+
+          if (!thumbsContainer || !mainImage) return;
+
+          function activateThumb(target) {
+            const imagePath = target.getAttribute('data-image');
+            // Find alt from inner img for better main image alt
+            const thumbImg = target.querySelector('img');
+            const altText = thumbImg ? thumbImg.alt : mainImage.alt;
+
+            if (imagePath) {
+              mainImage.src = imagePath;
+              if (altText) mainImage.alt = altText;
+              if (announcer) announcer.textContent = 'Image changed to ' + altText;
+            }
+
+            // Update active styles and aria-pressed
+            thumbsContainer.querySelectorAll('.image-gallery-thumbnail').forEach(t => {
+              t.classList.remove('active');
+              t.setAttribute('aria-pressed', 'false');
+            });
+            target.classList.add('active');
+            target.setAttribute('aria-pressed', 'true');
+          }
+
+          thumbsContainer.addEventListener('click', (e) => {
+            const target = e.target.closest('.image-gallery-thumbnail');
+            if (target) activateThumb(target);
+          });
+
+          thumbsContainer.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              const target = e.target.closest('.image-gallery-thumbnail');
+              if (target) {
+                e.preventDefault();
+                activateThumb(target);
+              }
+            }
+          });
+        })();
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle answer visibility
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        // Add to cart animation
+        const addToCartBtn = document.querySelector('.btn-primary');
+        if (addToCartBtn) {
+          addToCartBtn.addEventListener('click', function () {
+            const countBadge = document.querySelector('.fa-shopping-cart')?.parentElement?.querySelector('span');
+            const qty = quantityInput ? parseInt(quantityInput.value || '1') : 1;
+
+            if (countBadge) {
+              countBadge.textContent = (parseInt(countBadge.textContent || '0') + qty).toString();
+              countBadge.classList.add('pulse');
+              setTimeout(() => countBadge.classList.remove('pulse'), 1000);
+            }
+
+            alert('Product added to cart!');
+          });
+        }
+
+        // Intersection Observer for animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeElements = document.querySelectorAll('.fade-in, .stagger-item, .slide-in-left, .slide-in-right');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // animate once
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
