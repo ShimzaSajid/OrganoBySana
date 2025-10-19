@@ -84,7 +84,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="transition hover:text-[#d4af37] hover:translate-x-1 block">Shop All</a></li>
               <li><a href="#" className="transition hover:text-[#d4af37] hover:translate-x-1 block">Hair Oil</a></li>
               <li><a href="#" className="transition hover:text-[#d4af37] hover:translate-x-1 block">Organic Soap</a></li>
               <li><a href="#" className="transition hover:text-[#d4af37] hover:translate-x-1 block">Protein Powder</a></li>
