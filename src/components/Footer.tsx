@@ -70,12 +70,6 @@ function PolicyModal({
           {children}
         </div>
         <div className="px-6 py-4 border-t border-gray-100 flex justify-end">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-xl bg-[#2a4d2a] text-white hover:opacity-95 transition"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
