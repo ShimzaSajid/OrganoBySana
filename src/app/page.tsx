@@ -210,7 +210,7 @@ useEffect(() => {
           <div className="product-showcase p-8 md:p-12 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-in">
-                <h3 className="text-3xl font-bold brand-green mb-4">Signature Hair Oil</h3>
+                <h3 className="text-3xl font-bold brand-green mb-4">Signature Crown Curl Oil</h3>
                 <p className="text-lg text-gray-700 mb-6">
                   Our premium blend of organic oils nourishes from root to tip, promoting growth and adding incredible shine.
                 </p>
@@ -219,14 +219,14 @@ useEffect(() => {
                   <li className="flex items-center"><FaCheck className="text-brand-gold mr-2" /> Reduces breakage and split ends</li>
                   <li className="flex items-center"><FaCheck className="text-brand-gold mr-2" /> Adds natural shine and softness</li>
                 </ul>
-                <Link href="#" className="btn-primary inline-block">
-                  Discover Now
-                </Link>
+            <Link href="/product/signature-crown-curl-oil" className="btn-primary inline-block">
+              Discover Now
+            </Link>
               </div>
               <div className="flex justify-center fade-in slide-in-right">
                 <div className="relative">
                   <Image
-                    src="/images/7 Benefits of Amla for Hair.png"
+                    src="/images/oil1.png"
                     alt="Hair Oil"
                     width={640}
                     height={640}
