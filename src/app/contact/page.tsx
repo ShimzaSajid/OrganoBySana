@@ -65,6 +65,7 @@ function FAQItem({ q, a, delay = 0 }: { q: string; a: string; delay?: number }) 
 export default function ContactPage() {
   // success toast
   const [showToast, setShowToast] = useState(false);
+    const [faqScrollMargin, setFaqScrollMargin] = useState<number>(-180); 
 
   // hero bubbles
   const bubblesContainer = useRef<HTMLDivElement | null>(null);
@@ -115,7 +116,12 @@ export default function ContactPage() {
   const { ref: infoBlock, visible: infoVisible } = useIntersectionOnce<HTMLDivElement>();
 
   return (
+    
     <main className="bg-brand-cream text-brand-brown">
+      {/* Smooth scrolling globally */}
+      <style jsx global>{`
+        html { scroll-behavior: smooth; }
+      `}</style>
       {/* Success toast */}
       <div className={`success-message fixed top-5 right-5 z-[1000] rounded-xl bg-brand-green text-white px-5 py-3 shadow-lg flex items-center gap-2 transition-transform ${showToast ? "translate-x-0" : "translate-x-[150%]"}`}>
         <FaCheckCircle /> Message sent successfully!
@@ -301,7 +307,10 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-brand-cream">
+    <section
+        id="faq"
+        className="py-20 px-4 bg-brand-cream"
+        style={{ scrollMarginTop: `${faqScrollMargin}px` }}>
         <div className="container mx-auto max-w-4xl">
           <h2 className="section-title text-4xl md:text-5xl font-bold text-center mb-16 text-brand-green">
             Frequently Asked Questions
