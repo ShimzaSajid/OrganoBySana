@@ -127,9 +127,9 @@ useEffect(() => {
       <section className="hero-section text-brand-beige pt-2 pb-20 px-4 text-center">
         {/* decorative floating leaves */}
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 fade-in text-glow text-white">
-            CREATED by NATURE CURATED by SANA
-          </h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in text-glow text-white">
+        CREATED by NATURE CURATED by SANA
+      </h1>
           <p className="text-xl md:text-2xl mb-10 fade-in text-white" style={{ transitionDelay: "0.2s" }}>
             To provide trustworthy and affordable personal care solutions crafted with natural, organic ingredients and packaged with care — empowering individuals to live healthier, more confident lives.
           </p>
