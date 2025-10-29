@@ -124,7 +124,7 @@ useEffect(() => {
 )}
 
       {/* Hero Section */}
-      <section className="hero-section text-brand-beige pt-8 md:pt-0 pb-20 px-4 text-center">
+      <section className="hero-section text-brand-beige pt-2 md:pt-0 pb-20 px-4 text-center">
         {/* decorative floating leaves */}
         <div className="container mx-auto max-w-4xl relative z-10">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in text-glow text-white">
