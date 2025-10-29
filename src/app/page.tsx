@@ -124,23 +124,23 @@ useEffect(() => {
 )}
 
       {/* Hero Section */}
-      <section className="hero-section text-brand-beige pt-16 md:pt-20 pb-20 px-4 text-center">
+      <section className="hero-section text-brand-beige pt-8 md:pt-0 pb-20 px-4 text-center">
         {/* decorative floating leaves */}
         <div className="container mx-auto max-w-4xl relative z-10">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in text-glow text-white">
         CREATED by NATURE CURATED by SANA
       </h1>
           <p className="text-xl md:text-2xl mb-10 fade-in text-white" style={{ transitionDelay: "0.2s" }}>
-            To provide trustworthy and affordable personal care solutions crafted with natural, organic ingredients and packaged with care — empowering individuals to live healthier, more confident lives.
+           Trustworthy, affordable personal care crafted with natural ingredients—empowering healthier, more confident lives.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in" style={{ transitionDelay: "0.4s" }}>
-            <Link href="#" className="btn-primary bounce-in inline-flex items-center justify-center">
-              Shop Collection <FaArrowRight className="ml-2" />
-            </Link>
-            <Link href="#" className="btn-outline bounce-in" style={{ transitionDelay: "0.6s" }}>
-              Learn More
-            </Link>
-          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center fade-in" style={{ transitionDelay: "0.4s" }}>
+  <Link href="#" className="btn-primary bounce-in inline-flex items-center justify-center mx-auto sm:mx-0">
+    Shop Collection <FaArrowRight className="ml-2" />
+  </Link>
+  <Link href="#" className="btn-outline bounce-in inline-flex items-center justify-center mx-auto sm:mx-0" style={{ transitionDelay: "0.6s" }}>
+    Learn More
+  </Link>
+</div>
         </div>
       </section>
 
@@ -240,7 +240,7 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Categories */}
+
 {/* Categories */}
 <h2 className="text-4xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 brand-green fade-in">
   Shop By Category
