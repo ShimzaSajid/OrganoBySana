@@ -295,7 +295,7 @@ export default function Footer() {
               <FaEnvelope className="mr-2 text-[#d4af37] mt-0.5 text-sm" />
               <div>
                 <div className="font-semibold">Email</div>
-                <div className="text-xs">organostorebysana@gmail.com</div>
+                <div className="text-xs">Organobysana@gmail.com</div>
               </div>
             </div>
           </div>
