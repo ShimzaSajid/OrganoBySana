@@ -840,9 +840,8 @@ function ProductDetails({ product }: { product: CatalogItem }) {
   disabled={stock <= 0}
   className="
     btn-primary inline-flex items-center justify-center
-    flex-none w-auto           /* don't stretch on mobile */
-    max-w-[200px]              /* cap width so it can't exceed */
-    sm:flex-1 sm:max-w-none    /* allow growth on ≥sm if desired */
+    !w-auto !min-w-0 !max-w-[200px]     /* override globals */
+    sm:!max-w-none sm:flex-1
     px-4 py-3 text-sm sm:text-base
     whitespace-nowrap rounded-xl disabled:opacity-60
   "
