@@ -128,7 +128,7 @@ useEffect(() => {
         {/* decorative floating leaves */}
         <div className="container mx-auto max-w-4xl relative z-10">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in text-glow text-white">
-        CREATED by NATURE CURATED by SANA
+        CRAFTED by NATURE CURATED by SANA
       </h1>
           <p className="text-xl md:text-2xl mb-10 fade-in text-white" style={{ transitionDelay: "0.2s" }}>
            Trustworthy, affordable personal care crafted with natural ingredients—empowering healthier, more confident lives.
