@@ -205,7 +205,7 @@ export default function AboutPage() {
               <div className="fade-in slide-in-right">
                 <div className="founder-image">
                   <Image
-                    src="https://placehold.co/600x700/2a4d2a/ffffff?text=Organo+Products"
+                    src="/images/Bundles-icon.png"
                     alt="Organo Products"
                     width={600}
                     height={700}
