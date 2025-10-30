@@ -525,7 +525,7 @@ function ProductDetails({ product }: { product: CatalogItem }) {
                 )}
 
                 <div className="flex items-center mt-4 gap-3 flex-wrap animate-fade-in-up delay-300">
-                  <div className="text-brand-gold flex gap-1">
+                  <div className="text-yellow-800 flex gap-1">
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
                   </div>
                   {reviewsCount > 0 && <span className="text-black">({reviewsCount} reviews)</span>}
@@ -735,46 +735,59 @@ function ProductDetails({ product }: { product: CatalogItem }) {
                 </div>
               )}
 
-              {/* Bundles (singles only) */}
-              {bundles.length > 0 && (
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-brand-green">Choose Your Bundle:</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {bundles.map((bundle, index) => (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          setActiveBundle(bundle);
-                          setColorError(null);
-                        }}
-                        className={`relative border-2 rounded-xl p-4 text-left transition ${
-                          activeBundle?.quantity === bundle.quantity ? "border-brand-gold bg-brand-gold text-white shadow-lg" : "border-gray-200 bg-white text-black"
-                        }`}
-                      >
-                        {bundle.badge && (
-                          <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-2 text-sm font-bold rounded-full text-white bg-purple-500">
-                            {bundle.badge}
-                          </div>
-                        )}
-                        <div className="font-semibold text-lg mb-2 text-center">
-                          {bundle.quantity} {bundle.quantity === 1 ? "Pack" : "Packs"}
-                        </div>
-                        <div className="space-y-1 text-center">
-                          <div className={`text-2xl font-bold ${activeBundle?.quantity === bundle.quantity ? "text-white" : "text-brand-green"}`}>
-                            Rs. {bundle.price.toLocaleString()}
-                          </div>
-                          {bundle.compareAtPrice && bundle.compareAtPrice > bundle.price && (
-                            <div className={`text-sm ${activeBundle?.quantity === bundle.quantity ? "text-white/80" : "text-gray-500"} line-through`}>
-                              Rs. {bundle.compareAtPrice.toLocaleString()}
-                            </div>
-                          )}
-                          {bundle.savings && <div className="text-sm font-semibold text-red-600">{bundle.savings}</div>}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
+             {/* Bundles (singles only) */}
+{bundles.length > 0 && (
+  <div className="space-y-4">
+    <h3 className="text-xl font-bold text-brand-green">Choose Your Bundle:</h3>
+
+    <div className="grid grid-cols-3 gap-2">
+      {bundles.map((bundle, index) => {
+        const active = activeBundle?.quantity === bundle.quantity;
+        return (
+          <button
+            key={index}
+            onClick={() => { setActiveBundle(bundle); setColorError(null); }}
+            className={`relative min-w-0 w-full border-2 rounded-lg p-3 sm:p-4 text-left leading-tight
+              ${active ? "border-brand-gold bg-brand-gold text-white shadow-md"
+                       : "border-gray-200 bg-white text-black"}`}
+          >
+            {/* BADGE: force one line, make wider */}
+            {bundle.badge && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2
+                              px-3 py-1 rounded-full text-[11px] font-bold text-white bg-green-800
+                              whitespace-nowrap min-w-[98px] text-center">
+                {bundle.badge}
+              </div>
+            )}
+
+            <div className="font-semibold text-sm sm:text-base mb-1 text-center truncate">
+              {bundle.quantity} {bundle.quantity === 1 ? "Pack" : "Packs"}
+            </div>
+
+            <div className="space-y-0.5 text-center">
+              {/* PRICE: decreased size */}
+              <div className={`font-bold text-base sm:text-xl ${active ? "text-white" : "text-brand-green"}`}>
+                Rs. {bundle.price.toLocaleString()}
+              </div>
+
+              {bundle.compareAtPrice && bundle.compareAtPrice > bundle.price && (
+                <div className={`line-through text-[10px] sm:text-xs ${active ? "text-white/80" : "text-gray-500"}`}>
+                  Rs. {bundle.compareAtPrice.toLocaleString()}
                 </div>
               )}
+
+              {bundle.savings && (
+                <div className="text-[11px] sm:text-sm font-semibold text-red-600">
+                  {bundle.savings}
+                </div>
+              )}
+            </div>
+          </button>
+        );
+      })}
+    </div>
+  </div>
+)}
 
               {/* Low stock alert */}
               {stock > 0 && stock < 20 && (
@@ -793,48 +806,60 @@ function ProductDetails({ product }: { product: CatalogItem }) {
               )}
 
               {/* Qty + CTA */}
-              <div className="pt-2">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <button
-                      className="w-10 h-10 border-2 border-black bg-white text-black rounded-lg"
-                      onClick={() => setQty((q) => Math.max(1, q - 1))}
-                      aria-label="Decrease quantity"
-                    >
-                      −
-                    </button>
-                    <input
-                      className="w-16 h-10 border-2 border-black text-center font-bold rounded-lg text-black"
-                      value={qty}
-                      onChange={(e) => {
-                        const v = parseInt(e.target.value || "1", 10);
-                        setQty(Number.isNaN(v) ? 1 : Math.max(1, v));
-                      }}
-                    />
-                    <button
-                      className="w-10 h-10 border-2 border-black bg-white text-black rounded-lg"
-                      onClick={() => setQty((q) => q + 1)}
-                      aria-label="Increase quantity"
-                    >
-                      +
-                    </button>
-                  </div>
+<div className="pt-2">
+  <div className="flex items-center gap-3 flex-nowrap w-full">
+    {/* Counter (fixed width; never wraps) */}
+    <div className="flex items-center gap-2 shrink-0">
+      <button
+        className="w-9 h-9 border-2 border-black bg-white text-black rounded-lg"
+        onClick={() => setQty((q) => Math.max(1, q - 1))}
+        aria-label="Decrease quantity"
+      >
+        −
+      </button>
+      <input
+        className="w-12 h-9 border-2 border-black text-center font-bold rounded-lg text-black"
+        value={qty}
+        onChange={(e) => {
+          const v = parseInt(e.target.value || "1", 10);
+          setQty(Number.isNaN(v) ? 1 : Math.max(1, v));
+        }}
+      />
+      <button
+        className="w-9 h-9 border-2 border-black bg-white text-black rounded-lg"
+        onClick={() => setQty((q) => q + 1)}
+        aria-label="Increase quantity"
+      >
+        +
+      </button>
+    </div>
 
-                  <button
-                    onClick={handleAdd}
-                    disabled={stock <= 0}
-                    className="btn-primary flex items-center justify-center px-8 py-4 text-lg disabled:opacity-60"
-                  >
-                    <span className="mr-3">🛒</span> Add to Cart
-                  </button>
-                </div>
+    {/* Add to Cart (fills remaining space, stays on the same row) */}
+<button
+  onClick={handleAdd}
+  disabled={stock <= 0}
+  className="
+    btn-primary inline-flex items-center justify-center
+    flex-none w-auto           /* don't stretch on mobile */
+    max-w-[200px]              /* cap width so it can't exceed */
+    sm:flex-1 sm:max-w-none    /* allow growth on ≥sm if desired */
+    px-4 py-3 text-sm sm:text-base
+    whitespace-nowrap rounded-xl disabled:opacity-60
+  "
+>
+  <span className="mr-2">🛒</span>
+  Add to Cart
+</button>
 
-                <div className="mt-6">
-                  <Link href={`/category/${category}`} className="text-black hover:text-brand-gold transition inline-flex items-center gap-2">
-                    ← <span className="underline-offset-2 hover:underline">Back to category</span>
-                  </Link>
-                </div>
-              </div>
+  </div>
+
+  <div className="mt-6">
+    <Link href={`/category/${category}`} className="text-black hover:text-brand-gold transition inline-flex items-center gap-2">
+      ← <span className="underline-offset-2 hover:underline">Back to category</span>
+    </Link>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
@@ -1100,27 +1125,6 @@ function ProductDetails({ product }: { product: CatalogItem }) {
           </div>
         </div>
       </section>
-
-      {/* Mobile sticky bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 z-50">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="font-bold text-lg text-brand-green">Rs. {currentPrice.toLocaleString()}</div>
-            {currentCompareAtPrice && currentCompareAtPrice > currentPrice && (
-              <div className="text-sm text-gray-500 line-through">Rs. {currentCompareAtPrice.toLocaleString()}</div>
-            )}
-            {sizeLabel && <div className="text-xs text-gray-600 mt-1">Size: {sizeLabel}</div>}
-          </div>
-
-          <button
-            onClick={handleAdd}
-            disabled={stock <= 0}
-            className="btn-primary px-6 py-3 text-lg disabled:opacity-60"
-          >
-            Add to Cart
-          </button>
-        </div>
-      </div>
     </main>
   );
 }

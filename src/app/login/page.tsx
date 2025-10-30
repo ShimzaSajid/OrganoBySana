@@ -55,11 +55,8 @@ export default function LoginPage() {
         {/* Header Section */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-black mb-3 bg-gradient-to-r from-black to-brand-brown bg-clip-text text-transparent">
-            Welcome back
+            LOGIN
           </h1>
-          <p className="text-gray-600 text-lg">
-            Sign in to manage your orders and account
-          </p>
         </div>
 
         {/* Login Card */}

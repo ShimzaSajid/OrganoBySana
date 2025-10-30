@@ -188,14 +188,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
 @media (max-width: 767px) {
   .btn-primary, .btn-outline {
-    /* same footprint on mobile */
-    width: 260px;      
-    min-width: 260px;  
-    height: 48px;     
-    padding: 8px 20px; 
-    font-size: 14px;   
+    width: auto;       /* allow natural width */
+    min-width: 0;      /* remove minimum */
+    max-width: 200px;  /* cap if you want */
+    height: 48px;
+    padding: 8px 20px;
+    font-size: 14px;
   }
 }
+
 
 @media (min-width: 768px) {
   .btn-primary, .btn-outline { padding: 12px 32px; font-size: 16px; }
@@ -410,3 +411,14 @@ html { scroll-behavior: smooth; scroll-padding-top: 200px; }
   transition: all 0.5s ease;
 }
 .social-icon:hover::before { left: 100%; }
+
+/* globals.css – mobile downsizing for icon + cards */
+@media (max-width: 767px) {
+  .value-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 22px; /* affects inner icon size */
+  }
+  .mission-card { padding: 16px !important; }
+  .value-card { padding: 16px !important; }
+}

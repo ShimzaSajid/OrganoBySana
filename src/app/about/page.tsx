@@ -216,46 +216,46 @@ export default function AboutPage() {
             </div>
 
             {/* Brand details */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-16 max-w-6xl mx-auto">
               <div className="brand-detail-card fade-in">
                 <div className="value-icon mx-auto mb-4">
                   <FaTag aria-hidden />
                 </div>
-                <h3 className="text-xl font-bold brand-green mb-2">Brand Name</h3>
-                <p className="text-gray-700">Organo by Sana</p>
+                <h3 className="text-xl font-bold brand-green mb-2 text-center">Brand Name</h3>
+                <p className="text-gray-700 text-center">Organo by Sana</p>
               </div>
 
               <div className="brand-detail-card fade-in" style={{ transitionDelay: "0.1s" }}>
                 <div className="value-icon mx-auto mb-4">
                   <FaList aria-hidden />
                 </div>
-                <h3 className="text-xl font-bold brand-green mb-2">Category</h3>
-                <p className="text-gray-700">Organic Personal Care &amp; Wellness Products</p>
+                <h3 className="text-xl font-bold brand-green mb-2 text-center">Category</h3>
+                <p className="text-gray-700 text-center">Organic Personal Care &amp; Wellness Products</p>
               </div>
 
-              <div className="brand-detail-card fade-in" style={{ transitionDelay: "0.2s" }}>
+              <div className="brand-detail-card fade-in col-span-2 md:col-span-1" style={{ transitionDelay: "0.2s" }}>
                 <div className="value-icon mx-auto mb-4">
                   <FaUsers aria-hidden />
                 </div>
-                <h3 className="text-xl font-bold brand-green mb-2">Target Audience</h3>
-                <p className="text-gray-700">Health-conscious individuals seeking natural, safe, and effective organic alternatives</p>
+                <h3 className="text-xl font-bold brand-green mb-2 text-center">Target Audience</h3>
+                <p className="text-gray-700 text-center">Health-conscious individuals seeking natural, safe, and effective organic alternatives</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* MISSION / VISION */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 md:py-20 px-4 bg-white">
           <div className="container mx-auto">
-            <h2 className="section-title text-4xl md:text-5xl font-bold text-center mb-16 brand-green fade-in">Our Purpose</h2>
+           <h2 className="section-title text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 brand-green fade-in">Our Purpose</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="mission-card p-8 fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+               <div className="mission-card p-4 md:p-8 fade-in">
                 <div className="value-icon mb-6">
                   <FaBullseye aria-hidden />
                 </div>
-                <h3 className="text-2xl font-bold brand-green mb-4 text-center">Our Mission</h3>
-                <p className="text-lg text-gray-700 mb-6 text-center">
+                <h3 className="text-xl md:text-2xl font-bold brand-green mb-3 md:mb-4 text-center">Our Mission</h3>
+                <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6 text-center">
                   To provide trustworthy and affordable personal care solutions crafted with natural, organic ingredients and packaged with care — empowering individuals to live healthier, more confident lives.
                 </p>
                 <div className="text-center">
@@ -280,16 +280,16 @@ export default function AboutPage() {
         </section>
 
         {/* VALUES */}
-        <section className="py-20 px-4 bg-brand-cream">
+        <section className="py-14 md:py-20 px-4 bg-brand-cream">
           <div className="container mx-auto">
-            <h2 className="section-title text-4xl md:text-5xl font-bold text-center mb-16 brand-green fade-in">Our Values</h2>
+          <h2 className="section-title text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 brand-green fade-in">Our Values</h2>
 
             <div className="values-grid">
-              <div className="value-card fade-in">
+              <div className="value-card p-4 md:p-8 fade-in">
                 <div className="value-icon">
                   <FaLeaf aria-hidden />
                 </div>
-                <h3 className="text-xl font-bold brand-green mb-4">Purity</h3>
+                <h3 className="text-lg md:text-xl font-bold brand-green mb-3 md:mb-4">Purity</h3>
                 <p className="text-gray-700">We use only 100% natural, organic ingredients with no harmful chemicals or additives.</p>
               </div>
 
@@ -377,14 +377,15 @@ export default function AboutPage() {
             <p className="text-xl mb-10 fade-in" style={{ transitionDelay: "0.2s" }}>
               Experience the difference that pure, natural ingredients can make in your self-care routine.
             </p>
-            <div className="fade-in" style={{ transitionDelay: "0.4s" }}>
-              <Link href="/shop" className="btn-primary inline-block mr-4">
-                Shop Our Products
-              </Link>
-              <Link href="/contact" className="btn-outline inline-block">
-                Contact Us
-              </Link>
-            </div>
+<div
+  className="fade-in flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+  style={{ transitionDelay: "0.4s" }}
+>
+  <Link href="/shop" className="btn-primary">Shop Our Products</Link>
+  <Link href="/contact" className="btn-outline">Contact Us</Link>
+</div>
+
+
           </div>
         </section>
       </main>

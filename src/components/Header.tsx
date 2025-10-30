@@ -209,18 +209,6 @@ export default function Header() {
               Login <FaChevronRight className="text-sm opacity-60" />
             </Link>
           </div>
-
-          {/* Footer Social */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-brand-beige/20">
-            <div className="flex justify-center space-x-6">
-              <a href="https://www.facebook.com/share/1CPdrEJ23j/" className="text-white hover:text-brand-gold transition duration-300">
-                <FaFacebookF className="text-xl" />
-              </a>
-              <a href="https://www.instagram.com/organobysana/" className="text-white hover:text-brand-gold transition duration-300">
-                <FaInstagram className="text-xl" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </nav>

@@ -56,9 +56,6 @@ export default function SignupPage() {
           <h1 className="text-4xl font-bold text-black mb-3 bg-gradient-to-r from-black to-brand-brown bg-clip-text text-transparent">
             Join Organo
           </h1>
-          <p className="text-gray-600 text-lg">
-            Create your account and start shopping
-          </p>
         </div>
 
         {/* Signup Card */}

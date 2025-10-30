@@ -245,88 +245,88 @@ export const PRODUCTS: CatalogItem[] = [
     stock: 85,
   },
 
-  {
-    kind: "single",
-    id: "sb3",
-    slug: "honey-oatmeal-soap",
-    name: "Honey & Oatmeal Comfort Soap",
-    sizeLabel: "100 g",
-    price: 549,
-    compareAtPrice: 699,
-    category: "skincare-body",
-    image: "/images/honey-oatmeal-soap.jpg",
-    gallery: [
-      { src: "/images/honey-oatmeal-soap.jpg", alt: "Honey oatmeal soap" },
-      { src: "/images/oatmeal-closeup.jpg", alt: "Oatmeal texture" },
-      { src: "/images/sensitive-skin-care.jpg", alt: "Gentle care" },
-    ],
-    benefits: [
-      "Soothes irritated and sensitive skin",
-      "Natural exfoliation without abrasion",
-      "Calms eczema and psoriasis",
-      "Provides instant relief from itching",
-      "Maintains skin's natural moisture barrier",
-    ],
-    bundles: [
-      { 
-        quantity: 1, 
-        price: 549, 
-        compareAtPrice: 699,
-        savings: "21% OFF"
-      },
-      { 
-        quantity: 3, 
-        price: 1399, 
-        compareAtPrice: 2097,
-        badge: "Most Popular",
-        savings: "33% OFF"
-      },
-    ],
-    rating: 4.8,
-    reviewsCount: 142,
-    badges: ["Sensitive Skin", "Hypoallergenic"],
-    description: "Ultra-gentle soap with colloidal oatmeal and raw honey, specially formulated for sensitive, irritated, and reactive skin types.",
-    keyFeatures: [
-      "Colloidal oatmeal formula",
-      "Raw honey infusion",
-      "Hypoallergenic composition",
-      "Gentle exfoliation",
-      "pH balanced for skin"
-    ],
-    idealFor: [
-      "Sensitive and reactive skin",
-      "Eczema and psoriasis",
-      "Dry and itchy skin",
-      "Baby and children's skin",
-      "Post-treatment skin care"
-    ],
-    howToUse: [
-      { title: "For Sensitive Skin", text: "Use once daily or as needed." },
-      { title: "For Eczema", text: "Apply to affected areas and leave for 1 minute." },
-      { title: "Rinsing", text: "Rinse with cool water to soothe inflammation." },
-      { title: "Frequency", text: "Can be used multiple times daily for relief." },
-    ],
-    ingredients: [
-      "Colloidal Oatmeal", 
-      "Raw Honey", 
-      "Chamomile Extract", 
-      "Calendula Oil", 
-      "Sweet Almond Oil", 
-      "Avocado Oil", 
-      "Cocoa Butter"
-    ],
-    faqs: [
-      {
-        question: "Is this soap safe for babies?",
-        answer: "Yes, it's gentle enough for babies and children with sensitive skin. Always do a patch test first."
-      },
-      {
-        question: "Can it help with eczema flare-ups?",
-        answer: "Yes, the colloidal oatmeal and honey provide immediate relief from itching and inflammation associated with eczema."
-      }
-    ],
-    stock: 95,
-  },
+  // {
+  //   kind: "single",
+  //   id: "sb3",
+  //   slug: "honey-oatmeal-soap",
+  //   name: "Honey & Oatmeal Comfort Soap",
+  //   sizeLabel: "100 g",
+  //   price: 549,
+  //   compareAtPrice: 699,
+  //   category: "skincare-body",
+  //   image: "/images/honey-oatmeal-soap.jpg",
+  //   gallery: [
+  //     { src: "/images/honey-oatmeal-soap.jpg", alt: "Honey oatmeal soap" },
+  //     { src: "/images/oatmeal-closeup.jpg", alt: "Oatmeal texture" },
+  //     { src: "/images/sensitive-skin-care.jpg", alt: "Gentle care" },
+  //   ],
+  //   benefits: [
+  //     "Soothes irritated and sensitive skin",
+  //     "Natural exfoliation without abrasion",
+  //     "Calms eczema and psoriasis",
+  //     "Provides instant relief from itching",
+  //     "Maintains skin's natural moisture barrier",
+  //   ],
+  //   bundles: [
+  //     { 
+  //       quantity: 1, 
+  //       price: 549, 
+  //       compareAtPrice: 699,
+  //       savings: "21% OFF"
+  //     },
+  //     { 
+  //       quantity: 3, 
+  //       price: 1399, 
+  //       compareAtPrice: 2097,
+  //       badge: "Most Popular",
+  //       savings: "33% OFF"
+  //     },
+  //   ],
+  //   rating: 4.8,
+  //   reviewsCount: 142,
+  //   badges: ["Sensitive Skin", "Hypoallergenic"],
+  //   description: "Ultra-gentle soap with colloidal oatmeal and raw honey, specially formulated for sensitive, irritated, and reactive skin types.",
+  //   keyFeatures: [
+  //     "Colloidal oatmeal formula",
+  //     "Raw honey infusion",
+  //     "Hypoallergenic composition",
+  //     "Gentle exfoliation",
+  //     "pH balanced for skin"
+  //   ],
+  //   idealFor: [
+  //     "Sensitive and reactive skin",
+  //     "Eczema and psoriasis",
+  //     "Dry and itchy skin",
+  //     "Baby and children's skin",
+  //     "Post-treatment skin care"
+  //   ],
+  //   howToUse: [
+  //     { title: "For Sensitive Skin", text: "Use once daily or as needed." },
+  //     { title: "For Eczema", text: "Apply to affected areas and leave for 1 minute." },
+  //     { title: "Rinsing", text: "Rinse with cool water to soothe inflammation." },
+  //     { title: "Frequency", text: "Can be used multiple times daily for relief." },
+  //   ],
+  //   ingredients: [
+  //     "Colloidal Oatmeal", 
+  //     "Raw Honey", 
+  //     "Chamomile Extract", 
+  //     "Calendula Oil", 
+  //     "Sweet Almond Oil", 
+  //     "Avocado Oil", 
+  //     "Cocoa Butter"
+  //   ],
+  //   faqs: [
+  //     {
+  //       question: "Is this soap safe for babies?",
+  //       answer: "Yes, it's gentle enough for babies and children with sensitive skin. Always do a patch test first."
+  //     },
+  //     {
+  //       question: "Can it help with eczema flare-ups?",
+  //       answer: "Yes, the colloidal oatmeal and honey provide immediate relief from itching and inflammation associated with eczema."
+  //     }
+  //   ],
+  //   stock: 95,
+  // },
 
   // ==================== HEALTH & WELLNESS ====================
   {
@@ -428,89 +428,89 @@ export const PRODUCTS: CatalogItem[] = [
     stock: 45,
   },
 
-  {
-    kind: "single",
-    id: "hw2",
-    slug: "moringa-superfood-powder",
-    name: "Moringa Leaf Superfood Powder",
-    sizeLabel: "100 g",
-    price: 799,
-    compareAtPrice: 999,
-    category: "health-wellness",
-    image: "/images/moringa-powder.jpg",
-    gallery: [
-      { src: "/images/moringa-powder.jpg", alt: "Moringa powder" },
-      { src: "/images/moringa-plant.jpg", alt: "Moringa plant" },
-      { src: "/images/moringa-smoothie.jpg", alt: "Moringa in smoothie" },
-    ],
-    benefits: [
-      "92+ verified nutrients",
-      "7x more vitamin C than oranges",
-      "Natural energy without caffeine",
-      "Supports immune system",
-      "Rich in antioxidants and iron",
-    ],
-    bundles: [
-      { 
-        quantity: 1, 
-        price: 799, 
-        compareAtPrice: 999,
-        savings: "20% OFF"
-      },
-      { 
-        quantity: 2, 
-        price: 1499, 
-        compareAtPrice: 1998,
-        badge: "Most Popular",
-        savings: "25% OFF"
-      },
-      { 
-        quantity: 4, 
-        price: 2799, 
-        compareAtPrice: 3996,
-        badge: "Best Value", 
-        savings: "30% OFF"
-      },
-    ],
-    rating: 4.7,
-    reviewsCount: 189,
-    badges: ["Superfood", "Nutrient Dense"],
-    description: "Pure moringa oleifera leaf powder, shade-dried and cold-processed to preserve vital nutrients - nature's multivitamin.",
-    keyFeatures: [
-      "92+ essential nutrients",
-      "Shade-dried processing",
-      "Cold-processed preservation",
-      "Rich in antioxidants",
-      "Natural energy booster"
-    ],
-    idealFor: [
-      "Daily nutrition boost",
-      "Immune system support",
-      "Natural energy enhancement",
-      "Detox and cleansing",
-      "Overall wellness maintenance"
-    ],
-    howToUse: [
-      { title: "Daily Boost", text: "Mix 1 tsp in water, juice, or smoothie." },
-      { title: "Cooking", text: "Add to soups, sauces, or baked goods." },
-      { title: "Timing", text: "Take in morning for energy or evening for nutrients." },
-      { title: "Dosage", text: "Start with 1/2 tsp and gradually increase." },
-    ],
-    ingredients: [
-      "100% Pure Moringa Oleifera Leaf Powder"
-    ],
-    faqs: [
-      {
-        question: "What does moringa taste like?",
-        answer: "Moringa has a mild, slightly earthy flavor similar to green tea or matcha. It blends well with smoothies, juices, and foods."
-      },
-      {
-        question: "Can I take moringa while pregnant?",
-        answer: "While moringa is nutritious, we recommend consulting your healthcare provider before using any supplements during pregnancy."
-      }
-    ],
-    stock: 60,
-  },
+  // {
+  //   kind: "single",
+  //   id: "hw2",
+  //   slug: "moringa-superfood-powder",
+  //   name: "Moringa Leaf Superfood Powder",
+  //   sizeLabel: "100 g",
+  //   price: 799,
+  //   compareAtPrice: 999,
+  //   category: "health-wellness",
+  //   image: "/images/moringa-powder.jpg",
+  //   gallery: [
+  //     { src: "/images/moringa-powder.jpg", alt: "Moringa powder" },
+  //     { src: "/images/moringa-plant.jpg", alt: "Moringa plant" },
+  //     { src: "/images/moringa-smoothie.jpg", alt: "Moringa in smoothie" },
+  //   ],
+  //   benefits: [
+  //     "92+ verified nutrients",
+  //     "7x more vitamin C than oranges",
+  //     "Natural energy without caffeine",
+  //     "Supports immune system",
+  //     "Rich in antioxidants and iron",
+  //   ],
+  //   bundles: [
+  //     { 
+  //       quantity: 1, 
+  //       price: 799, 
+  //       compareAtPrice: 999,
+  //       savings: "20% OFF"
+  //     },
+  //     { 
+  //       quantity: 2, 
+  //       price: 1499, 
+  //       compareAtPrice: 1998,
+  //       badge: "Most Popular",
+  //       savings: "25% OFF"
+  //     },
+  //     { 
+  //       quantity: 4, 
+  //       price: 2799, 
+  //       compareAtPrice: 3996,
+  //       badge: "Best Value", 
+  //       savings: "30% OFF"
+  //     },
+  //   ],
+  //   rating: 4.7,
+  //   reviewsCount: 189,
+  //   badges: ["Superfood", "Nutrient Dense"],
+  //   description: "Pure moringa oleifera leaf powder, shade-dried and cold-processed to preserve vital nutrients - nature's multivitamin.",
+  //   keyFeatures: [
+  //     "92+ essential nutrients",
+  //     "Shade-dried processing",
+  //     "Cold-processed preservation",
+  //     "Rich in antioxidants",
+  //     "Natural energy booster"
+  //   ],
+  //   idealFor: [
+  //     "Daily nutrition boost",
+  //     "Immune system support",
+  //     "Natural energy enhancement",
+  //     "Detox and cleansing",
+  //     "Overall wellness maintenance"
+  //   ],
+  //   howToUse: [
+  //     { title: "Daily Boost", text: "Mix 1 tsp in water, juice, or smoothie." },
+  //     { title: "Cooking", text: "Add to soups, sauces, or baked goods." },
+  //     { title: "Timing", text: "Take in morning for energy or evening for nutrients." },
+  //     { title: "Dosage", text: "Start with 1/2 tsp and gradually increase." },
+  //   ],
+  //   ingredients: [
+  //     "100% Pure Moringa Oleifera Leaf Powder"
+  //   ],
+  //   faqs: [
+  //     {
+  //       question: "What does moringa taste like?",
+  //       answer: "Moringa has a mild, slightly earthy flavor similar to green tea or matcha. It blends well with smoothies, juices, and foods."
+  //     },
+  //     {
+  //       question: "Can I take moringa while pregnant?",
+  //       answer: "While moringa is nutritious, we recommend consulting your healthcare provider before using any supplements during pregnancy."
+  //     }
+  //   ],
+  //   stock: 60,
+  // },
 
   // ==================== ACCESSORIES ====================
     {
@@ -615,11 +615,13 @@ export const PRODUCTS: CatalogItem[] = [
     price: 449,
     compareAtPrice: 599,
     category: "accessories",
-    image: "/images/wooden-comb-main.jpg",
+    image: "/images/comb pic 5.png",
     gallery: [
-      { src: "/images/wooden-comb-main.jpg", alt: "Neem wooden comb" },
-      { src: "/images/wooden-comb-teeth.jpg", alt: "Comb teeth detail" },
-      { src: "/images/comb-using.jpg", alt: "Comb in use" },
+        { src: "/images/comb pic 1.png", alt: "Neem wooden comb" },
+      { src: "/images/comb pic 2.png", alt: "Neem wooden comb" },
+      { src: "/images/comb pic 3.png", alt: "Comb teeth detail" },
+      { src: "/images/comb pic 4.png", alt: "Comb in use" },
+      { src: "/images/comb pic 5.png", alt: "Comb in use" },
     ],
     benefits: [
       "Prevents static and frizz",
@@ -683,52 +685,50 @@ export const PRODUCTS: CatalogItem[] = [
     stock: 75,
   },
 
-
-
-  {
-    kind: "kit",
-    id: "kit-growth-duo",
-    slug: "growth-duo-oil-comb",
-    name: "Growth Duo: Hair Oil + Neem Comb",
-    category: "bundles",
-    image: "/images/hair-oil.png",
-    gallery: [
-    { src: "/images/bundles/growth-duo-main.jpg", alt: "Growth Duo bundle" },
-    { src: "/images/hair-oil.png", alt: "Signature Hair Oil" },
-    { src: "/images/wooden-comb-main.jpg", alt: "Neem Wood Comb" },
-  ],
-    description: "Nourish + detangle: bestseller oil paired with anti-static neem comb.",
-    price: 1799,
-    compareAtPrice: 1999,
-    items: [
-      { productId: "hc1", quantity: 1 },
-      { productId: "ac1", quantity: 1 },
-    ],
-  },
-  {
-  kind: "kit",
-  id: "kit-hair-care-essentials",
-  slug: "hair-care-essentials-bundle",
-  name: "Hair Care Essentials Bundle",
-  category: "bundles",
-  image: "/images/bundles/hair-care-essentials-main.jpg",
-  gallery: [
-    { src: "/images/bundles/hair-care-essentials-main.jpg", alt: "Hair Care Essentials Bundle" },
-    { src: "/images/hair-oil.png", alt: "Signature Hair Oil" },
-    { src: "/images/silk-scrunchies.jpg", alt: "Pure Silk Scrunchies" },
-    { src: "/images/wooden-comb-main.jpg", alt: "Neem Wood Comb" },
-    { src: "/images/bundles/hair-care-lifestyle.jpg", alt: "Hair care routine lifestyle" },
-  ],
-  badges: ["Ultimate Value", "Complete Routine", "Customer Favorite"],
-  rating: 4.9,
-  reviewsCount: 87,
-  description: "The complete hair care trifecta: Nourish with our bestselling oil, detangle with the antibacterial neem comb, and protect your style with luxurious silk scrunchies. Everything you need for healthy, beautiful hair from root to tip.",
-  price: 2299,
-  compareAtPrice: 3297, 
-  items: [
-    { productId: "hc1", quantity: 1 }, // Signature Hair Oil
-    { productId: "ac2", quantity: 2 }, // Pure Silk Scrunchies
-    { productId: "ac1", quantity: 1 }, // Neem Wood Comb
-  ],
-},
+  // {
+  //   kind: "kit",
+  //   id: "kit-growth-duo",
+  //   slug: "growth-duo-oil-comb",
+  //   name: "Growth Duo: Hair Oil + Neem Comb",
+  //   category: "bundles",
+  //   image: "/images/hair-oil.png",
+  //   gallery: [
+  //   { src: "/images/bundles/growth-duo-main.jpg", alt: "Growth Duo bundle" },
+  //   { src: "/images/hair-oil.png", alt: "Signature Hair Oil" },
+  //   { src: "/images/wooden-comb-main.jpg", alt: "Neem Wood Comb" },
+  // ],
+  //   description: "Nourish + detangle: bestseller oil paired with anti-static neem comb.",
+  //   price: 1799,
+  //   compareAtPrice: 1999,
+  //   items: [
+  //     { productId: "hc1", quantity: 1 },
+  //     { productId: "ac1", quantity: 1 },
+  //   ],
+  // },
+//   {
+//   kind: "kit",
+//   id: "kit-hair-care-essentials",
+//   slug: "hair-care-essentials-bundle",
+//   name: "Hair Care Essentials Bundle",
+//   category: "bundles",
+//   image: "/images/bundles/hair-care-essentials-main.jpg",
+//   gallery: [
+//     { src: "/images/bundles/hair-care-essentials-main.jpg", alt: "Hair Care Essentials Bundle" },
+//     { src: "/images/hair-oil.png", alt: "Signature Hair Oil" },
+//     { src: "/images/silk-scrunchies.jpg", alt: "Pure Silk Scrunchies" },
+//     { src: "/images/wooden-comb-main.jpg", alt: "Neem Wood Comb" },
+//     { src: "/images/bundles/hair-care-lifestyle.jpg", alt: "Hair care routine lifestyle" },
+//   ],
+//   badges: ["Ultimate Value", "Complete Routine", "Customer Favorite"],
+//   rating: 4.9,
+//   reviewsCount: 87,
+//   description: "The complete hair care trifecta: Nourish with our bestselling oil, detangle with the antibacterial neem comb, and protect your style with luxurious silk scrunchies. Everything you need for healthy, beautiful hair from root to tip.",
+//   price: 2299,
+//   compareAtPrice: 3297, 
+//   items: [
+//     { productId: "hc1", quantity: 1 }, // Signature Hair Oil
+//     { productId: "ac2", quantity: 2 }, // Pure Silk Scrunchies
+//     { productId: "ac1", quantity: 1 }, // Neem Wood Comb
+//   ],
+// },
 ];
