@@ -249,7 +249,7 @@ useEffect(() => {
 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 md:gap-12 place-items-center">
   {/* Hair Care */}
   <Link href="/category/hair-care" className="flex flex-col items-center stagger-item scale-on-hover">
-    <div className="category-circle overflow-hidden shadow-lg mb-3 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="category-circle overflow-hidden shadow-lg mb-3 w-35 h-35 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
       <Image
         src="/images/7 Benefits of Amla for Hair.png"
         alt="Hair Care"
@@ -264,7 +264,7 @@ useEffect(() => {
 
   {/* Health & Wellness */}
   <Link href="/category/health-wellness" className="flex flex-col items-center stagger-item scale-on-hover">
-    <div className="category-circle overflow-hidden shadow-lg mb-3 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="category-circle overflow-hidden shadow-lg mb-3 w-35 h-35 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
       <Image
         src="/images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png"
         alt="Health & Wellness"
@@ -279,7 +279,7 @@ useEffect(() => {
 
   {/* Skincare & Body */}
   <Link href="/category/skincare-body" className="flex flex-col items-center stagger-item scale-on-hover">
-    <div className="category-circle overflow-hidden shadow-lg mb-3 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="category-circle overflow-hidden shadow-lg mb-3 w-35 h-35 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
       <Image
         src="/images/Organic Soaps By Organic Oasis.png"
         alt="Skincare & Body"
@@ -294,7 +294,7 @@ useEffect(() => {
 
   {/* Accessories */}
   <Link href="/category/accessories" className="flex flex-col items-center stagger-item scale-on-hover">
-    <div className="category-circle overflow-hidden shadow-lg mb-3 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="category-circle overflow-hidden shadow-lg mb-3 w-35 h-35 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
       <Image
         src="/images/hair-accessories1.png"
         alt="Accessories"
@@ -309,9 +309,9 @@ useEffect(() => {
 
   {/* Bundles */}
   <Link href="/category/bundles" className="flex flex-col items-center stagger-item scale-on-hover">
-    <div className="category-circle overflow-hidden shadow-lg mb-3 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="category-circle overflow-hidden shadow-lg mb-3 w-35 h-35 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
       <Image
-        src="/images/bundles-banner.png"  
+        src="/images/Bundles-icon.png"  
         alt="Bundles"
         width={180}
         height={180}

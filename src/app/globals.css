@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 .feature-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--brand-green), var(--brand-gold)); }
 
 /* KEEPING the circular category box */
-.category-circle { width:180px; height:180px; border-radius:50%; overflow:hidden; border:3px solid var(--brand-gold); position:relative; }
+.category-circle {border-radius:50%; overflow:hidden; border:3px solid var(--brand-gold); position:relative; }
 .category-circle::after { content:''; position:absolute; inset:0; background: rgba(42,77,42,.1); opacity:0; transition: opacity .3s ease; }
 .category-circle:hover::after { opacity:1; }
 
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 .review-card::before { content:'\"'; position:absolute; top:-20px; right:20px; font-size:120px; color: var(--brand-gold); opacity:.1; font-family: 'Playfair Display', serif; }
 
 /* Buttons */
-/* Buttons */
+
 .btn-primary, .btn-outline {
   border-radius: 50px;
   font-weight: bold;
@@ -172,10 +172,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: auto;          /* existing */
-  min-width: 160px;     /* existing */
-  padding: 10px 24px;   /* existing */
-  box-sizing: border-box; /* <-- ADD THIS */
+  width: auto;          
+  min-width: 160px;   
+  padding: 10px 24px;  
+  box-sizing: border-box; 
 }
 
 .btn-primary {
@@ -189,11 +189,11 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 @media (max-width: 767px) {
   .btn-primary, .btn-outline {
     /* same footprint on mobile */
-    width: 260px;      /* choose the exact width you want */
-    min-width: 260px;  /* prevent shrink */
-    height: 48px;      /* optional: fixes equal height too */
-    padding: 8px 20px; /* keep your existing mobile padding */
-    font-size: 14px;   /* existing */
+    width: 260px;      
+    min-width: 260px;  
+    height: 48px;     
+    padding: 8px 20px; 
+    font-size: 14px;   
   }
 }
 

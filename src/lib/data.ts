@@ -86,18 +86,20 @@ export const PRODUCTS: CatalogItem[] = [
   {
     kind: "single",
     id: "sb1",
-    slug: "lavender-organic-soap",
-    name: "Lavender Dream Organic Soap",
+    slug: "Loofah-organic-soap",
+    name: "Loofah Organic Soap",
     sizeLabel: "100 g",
     price: 599,
     compareAtPrice: 799,
     category: "skincare-body",
-    image: "/images/Organic Soaps By Organic Oasis.png",
+    image: "/images/Lofa soap pic 1.png",
     gallery: [
       // fixed path here:
-      { src: "/images/Organic Soaps By Organic Oasis.png", alt: "Lavender soap bar" },
-      { src: "/images/soap-lather.jpg", alt: "Rich lather" },
-      { src: "/images/lavender-field.jpg", alt: "Lavender ingredients" },
+      { src: "/images/Lofa soap pic 1.png", alt: "Lavender ingredients" },
+      { src: "/images/Lofa soap pic 2.png", alt: "Lavender soap bar" },
+      { src: "/images/Lofa soap pic 3.png", alt: "Rich lather" },
+      { src: "/images/Lofa soap pic 4.png", alt: "Lavender ingredients" },
+      { src: "/images/Lofa soap pic 5.png", alt: "Lavender ingredients" },
     ],
     benefits: [
       "Calms and relaxes senses",
@@ -151,17 +153,18 @@ export const PRODUCTS: CatalogItem[] = [
   {
     kind: "single",
     id: "sb2",
-    slug: "charcoal-detox-soap",
-    name: "Charcoal Detox & Purify Soap",
+    slug: "Neem-soap",
+    name: "Neem Soap",
     sizeLabel: "100 g",
     price: 649,
     compareAtPrice: 849,
     category: "skincare-body",
-    image: "/images/charcoal-soap-main.jpg",
+    image: "/images/Neem soap pic 2.png",
     gallery: [
-      { src: "/images/charcoal-soap-main.jpg", alt: "Charcoal soap bar" },
-      { src: "/images/charcoal-lather.jpg", alt: "Charcoal lather" },
-      { src: "/images/detox-skin.jpg", alt: "Purified skin results" },
+       { src: "/images/Neem soap pic 2.png", alt: "Neem soap bar" },
+      { src: "/images/Neem Soap pic 1.png", alt: "Neem soap bar" },
+      { src: "/images/Neem soap pic 3.jpg", alt: "Neem lather" },
+      { src: "/images/Neem soap pic 4.jpg", alt: "Purified skin results" },
     ],
     benefits: [
       "Draws out impurities and toxins",
@@ -329,20 +332,21 @@ export const PRODUCTS: CatalogItem[] = [
   {
     kind: "single",
     id: "hw1",
-    slug: "clean-protein-powder",
-    name: "Plant-Based Protein Powder",
-    sizeLabel: "500 g",
+    slug: "Trim-tox-powder",
+    name: "Trim Tox",
+    sizeLabel: "100 g",
     price: 3499,
     compareAtPrice: 4499,
     category: "health-wellness",
-    image: "/images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png",
+    image: "/images/trim pic 3.png",
     gallery: [
-      { src: "/images/Making Protein Powder Silky Smooth_ The Ultimate Guide!.png", alt: "Protein powder pouch" },
-      { src: "/images/protein-scoop.jpg", alt: "Protein scoop" },
-      { src: "/images/protein-smoothie.jpg", alt: "Protein smoothie" },
+      { src: "/images/trim pic 1.png", alt: "trim powder pouch" },
+      { src: "/images/trim pic 2.png", alt: "trim powder pouch" },
+      { src: "/images/trim pic 3.png", alt: "trim scoop" },
+      { src: "/images/trim pic 4.png", alt: "trim tea" },
     ],
     benefits: [
-      "25g complete protein per serving",
+      "100g complete protein per serving",
       "Easy digestion - no bloating",
       "Supports muscle recovery",
       "Promotes satiety and weight management",
@@ -375,7 +379,7 @@ export const PRODUCTS: CatalogItem[] = [
     badges: ["Bestseller", "Vegan"],
     description: "Premium plant-based protein blend with complete amino acid profile, perfect for post-workout recovery and daily nutrition.",
     keyFeatures: [
-      "25g complete protein per serving",
+      "100g complete protein per serving",
       "100% plant-based ingredients",
       "Easy digestibility",
       "Complete amino acid profile",
@@ -509,9 +513,102 @@ export const PRODUCTS: CatalogItem[] = [
   },
 
   // ==================== ACCESSORIES ====================
-  {
+    {
     kind: "single",
     id: "ac1",
+    slug: "silk-scrunchies-set",
+    name: "Pure Silk Scrunchies",
+    sizeLabel: "Normal size",
+    colors: ["Black", "Beige", "Blush","White","Grey"],
+    allowDuplicateColors: true,  
+    price: 899,
+    compareAtPrice: 1199,
+    category: "accessories",
+    image: "/images/scrunchy pic 1.jfif",
+    gallery: [
+       { src: "/images/scrunchy pic 1.jfif", alt: "Silk scrunchies set" },
+      { src: "/images/scrunchy pic 2.jfif", alt: "Silk scrunchies set" },
+      { src: "/images/scrunchy pic 3.jfif", alt: "Scrunchies being worn" },
+      { src: "/images/scrunchy pic 4.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 5.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 6.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 7.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 8.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 9.jfif", alt: "Silk material closeup" },
+      { src: "/images/scrunchy pic 10.jfif", alt: "Silk material closeup" },
+    ],
+    benefits: [
+      "Prevents hair breakage and split ends",
+      "Reduces frizz and static",
+      "Maintains hair moisture balance",
+      "Gentle on hair strands",
+      "No crease or dent marks",
+    ],
+    bundles: [
+      { 
+        quantity: 1, 
+        price: 899, 
+        compareAtPrice: 1199,
+        savings: "25% OFF"
+      },
+      { 
+        quantity: 2, 
+        price: 1599, 
+        compareAtPrice: 2398,
+        badge: "Most Popular",
+        savings: "33% OFF"
+      },
+      { 
+        quantity: 3, 
+        price: 2199, 
+        compareAtPrice: 3597,
+        badge: "Best Value", 
+        savings: "39% OFF"
+      },
+    ],
+    rating: 4.8,
+    reviewsCount: 156,
+    badges: ["Hair-Safe", "Luxury"],
+    description: "Luxury 100% mulberry silk scrunchies that treat your hair with care while adding elegant style to any look.",
+    keyFeatures: [
+      "100% mulberry silk",
+      "Luxury 19 momme weight",
+      "Hair-safe elastic core",
+      "Three-piece set",
+      "Multiple color options"
+    ],
+    idealFor: [
+      "Preventing hair breakage",
+      "Reducing frizz and static",
+      "Overnight hair protection",
+      "Gentle styling options",
+      "Luxury hair accessories"
+    ],
+    howToUse: [
+      { title: "Ponytail", text: "Wrap loosely to avoid tension on hair." },
+      { title: "Bun", text: "Use for secure yet gentle hold." },
+      { title: "Wrist Wear", text: "Wear on wrist when not in use." },
+      { title: "Care", text: "Hand wash cold, air dry flat." },
+    ],
+    ingredients: [
+      "100% Mulberry Silk", 
+      "Hair-Safe Elastic Core"
+    ],
+    faqs: [
+      {
+        question: "How should I clean my silk scrunchies?",
+        answer: "Hand wash in cold water with mild detergent, then air dry flat. Do not machine wash or tumble dry."
+      },
+      {
+        question: "Do they come in different colors?",
+        answer: "Yes, each set includes three complementary colors that work with various hair colors and styles."
+      }
+    ],
+    stock: 15,
+  },
+  {
+    kind: "single",
+    id: "ac2",
     slug: "neem-wooden-comb",
     name: "Neem Wood Wide-Tooth Comb",
     sizeLabel: "One Size",
@@ -586,92 +683,7 @@ export const PRODUCTS: CatalogItem[] = [
     stock: 75,
   },
 
-  {
-    kind: "single",
-    id: "ac2",
-    slug: "silk-scrunchies-set",
-    name: "Pure Silk Scrunchies",
-    sizeLabel: "Normal size",
-    colors: ["Black", "Beige", "Blush","White","Grey"],
-    allowDuplicateColors: true,  
-    price: 899,
-    compareAtPrice: 1199,
-    category: "accessories",
-    image: "/images/silk-scrunchies.jpg",
-    gallery: [
-      { src: "/images/silk-scrunchies.jpg", alt: "Silk scrunchies set" },
-      { src: "/images/silk-scrunchies-wearing.jpg", alt: "Scrunchies being worn" },
-      { src: "/images/silk-fabric.jpg", alt: "Silk material closeup" },
-    ],
-    benefits: [
-      "Prevents hair breakage and split ends",
-      "Reduces frizz and static",
-      "Maintains hair moisture balance",
-      "Gentle on hair strands",
-      "No crease or dent marks",
-    ],
-    bundles: [
-      { 
-        quantity: 1, 
-        price: 899, 
-        compareAtPrice: 1199,
-        savings: "25% OFF"
-      },
-      { 
-        quantity: 2, 
-        price: 1599, 
-        compareAtPrice: 2398,
-        badge: "Most Popular",
-        savings: "33% OFF"
-      },
-      { 
-        quantity: 3, 
-        price: 2199, 
-        compareAtPrice: 3597,
-        badge: "Best Value", 
-        savings: "39% OFF"
-      },
-    ],
-    rating: 4.8,
-    reviewsCount: 156,
-    badges: ["Hair-Safe", "Luxury"],
-    description: "Luxury 100% mulberry silk scrunchies that treat your hair with care while adding elegant style to any look.",
-    keyFeatures: [
-      "100% mulberry silk",
-      "Luxury 19 momme weight",
-      "Hair-safe elastic core",
-      "Three-piece set",
-      "Multiple color options"
-    ],
-    idealFor: [
-      "Preventing hair breakage",
-      "Reducing frizz and static",
-      "Overnight hair protection",
-      "Gentle styling options",
-      "Luxury hair accessories"
-    ],
-    howToUse: [
-      { title: "Ponytail", text: "Wrap loosely to avoid tension on hair." },
-      { title: "Bun", text: "Use for secure yet gentle hold." },
-      { title: "Wrist Wear", text: "Wear on wrist when not in use." },
-      { title: "Care", text: "Hand wash cold, air dry flat." },
-    ],
-    ingredients: [
-      "100% Mulberry Silk", 
-      "Hair-Safe Elastic Core"
-    ],
-    faqs: [
-      {
-        question: "How should I clean my silk scrunchies?",
-        answer: "Hand wash in cold water with mild detergent, then air dry flat. Do not machine wash or tumble dry."
-      },
-      {
-        question: "Do they come in different colors?",
-        answer: "Yes, each set includes three complementary colors that work with various hair colors and styles."
-      }
-    ],
-    stock: 15,
-  },
+
 
   {
     kind: "kit",
